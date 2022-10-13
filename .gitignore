@@ -1,0 +1,13 @@
+# General
+.vscode
+
+# Node.js / React
+.env
+node_modules
+*yarn.lock
+
+# Golang
+
+
+# Rust
+bin

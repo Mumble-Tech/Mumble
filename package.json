@@ -1,0 +1,17 @@
+{
+  "name": "mumble-core",
+  "version": "0.0.1",
+  "description": "Mumble is a streaming service for churches to share their content across the world",
+  "main": "index.js",
+  "repository": "https://github.com/Mumble-Tech/Mumble.git",
+  "author": "deondreE <deondreenglish45@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "format": "prettier --config .prettierrc.js --write \"**/*.{ts,tsx,html,scss,json,go,yml}\""
+  },
+  "devDependencies": {
+    "prettier": "^2.7.1",
+    "prettier-plugin-go-template": "^0.0.13"
+  }
+}
