@@ -6,17 +6,7 @@ import (
 	"io"
 	"net/http"
 	"os"
-
-	log "github.com/sirupsen/logrus"
 )
-
-func init() {
-	log.SetFormatter(&log.JSONFormatter{})
-
-	log.SetOutput(os.Stdout)
-
-	log.SetLevel(log.WarnLevel)
-}
 
 func getRoot(w http.ResponseWriter, r *http.Request) {
 	fmt.Printf("got / request\n")
