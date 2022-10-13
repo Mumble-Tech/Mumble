@@ -1,30 +1,52 @@
 ## Roadmap
+<<<<<<< HEAD
 ---
 ### Alpha 0.1
 ---
 
 ### Mumble Web
+=======
+* Alpha 0.1 *
+---
+
+* Mumble Web *
+>>>>>>> 60b47163d9ddc561e78b6276b1d2322c2428fb44
 ---
 
 - Be able to use a streaming key and the app to stream to the service.
 - Be able to watch the live stream from different states.
 
+<<<<<<< HEAD
 ### Mumble App (Windows Only for now!)
+=======
+* Mumble App ( Windows Only for now! ) *
+>>>>>>> 60b47163d9ddc561e78b6276b1d2322c2428fb44
 ---
 
 - App built and usabele, ** (Window does open) **
 - Show where the stream key needs to be inputted
 - Show where the live feed of the stream, and show preview 	
 
+<<<<<<< HEAD
 ### Alpha 0.5
 ---
 
 ### Mumble Web
+=======
+* Alpha 0.5 *
+---
+
+* Mumble Web *
+>>>>>>> 60b47163d9ddc561e78b6276b1d2322c2428fb44
 
 - Be able to stream across countries but not able to watch the live feed.
 - Be able to comment on the streams after / during.
 
+<<<<<<< HEAD
 ### Mumble App
+=======
+* Mumble App *
+>>>>>>> 60b47163d9ddc561e78b6276b1d2322c2428fb44
 
 - Udpate to the user interface, make it look nicer, Test build in MACOS native binary (Not Important!)
 - Be able to connect the app to your current account removing the need for keys to be a public thing.
