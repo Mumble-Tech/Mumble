@@ -5,7 +5,6 @@
   "main": "index.js",
   "repository": "https://github.com/Mumble-Tech/Mumble.git",
   "author": "deondreE <deondreenglish45@gmail.com>",
-  "license": "MIT",
   "private": true,
   "scripts": {
     "format": "prettier --config .prettierrc.js --write \"**/*.{ts,tsx,html,scss,json,go,yml}\""
