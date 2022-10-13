@@ -24,11 +24,7 @@
 - Be able to stream across countries but not able to watch the live feed.
 - Be able to comment on the streams after / during.
 
-<<<<<<< HEAD
 ### Mumble App
-=======
-* Mumble App *
->>>>>>> 60b47163d9ddc561e78b6276b1d2322c2428fb44
 
 - Udpate to the user interface, make it look nicer, Test build in MACOS native binary (Not Important!)
 - Be able to connect the app to your current account removing the need for keys to be a public thing.
