@@ -16,7 +16,9 @@ node_modules
 *yarn.lock
 
 # Golang
-
+*.sql
+db
+migrations
 
 # Rust
 bin
