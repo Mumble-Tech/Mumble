@@ -14,7 +14,10 @@
     "prettier": "^2.7.1",
     "prettier-plugin-go-template": "^0.0.13"
   },
-  "workspaces": [
-    "packages/*"
-  ]
+  "engines": {
+		"pnpm": "7.13.4",
+		"npm": "pnpm",
+		"yarn": "pnpm",
+		"node": ">=14.0.0"
+	}
 }
