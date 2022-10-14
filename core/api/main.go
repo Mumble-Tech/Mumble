@@ -1,46 +1,57 @@
 package main
 
 import (
+	"api/util"
 	"context"
+	"encoding/json"
 	"errors"
 	"fmt"
 	"io"
-	"io/ioutil"
 	"net"
 	"net/http"
 	"os"
 
-	"github.com/Mumble-Tech/Mumble/core/api/logger"
-
 	"github.com/gorilla/mux"
+	log "github.com/sirupsen/logrus"
 )
 
+// import ./util package
+// import "github.com/"
+
+// User is a struct that represents a user
+type User struct {
+	Username string `json:"username"`
+	Password string `json:"password"`
+}
+
 func getRoot(w http.ResponseWriter, r *http.Request) {
-	fmt.Printf("got / request\n")
+	log.Println("Got / Request")
+	// fmt.Printf("got / request\n")
 	io.WriteString(w, "This is my website!\n")
 }
 
 func createUserRoute(w http.ResponseWriter, r *http.Request) {
-	fmt.Printf("got /create/user\n")
+	log.Println("Got /create/user Request")
 
-	ctx := r.Context()
-
-	// URL parameters -- Nothing will be done with this yet
-	hasFirst := r.URL.Query().Has("first")
-	first := r.URL.Query().Get("first")
-	hasSecond := r.URL.Query().Has("second")
-	second := r.URL.Query().Get("second")
-	body, err := ioutil.ReadAll(r.Body)
+	body, err := io.ReadAll(r.Body)
 	if err != nil {
-		fmt.Printf("could not read body: %s\n", err)
+		log.Println("Error reading body")
+		http.Error(w, "can't read body", http.StatusBadRequest)
+		return
 	}
 
-	fmt.Printf("%s: got / request. first(%t)=%s, second(%t)=%s, body:\n%s\n",
-		ctx.Value(ctx),
-		hasFirst, first,
-		hasSecond, second,
-		body)
+	// parse the body into a struct
+	var u User
+	err = json.Unmarshal(body, &u)
+	if err != nil {
+		log.Println("Error unmarshalling body")
+		http.Error(w, "can't unmarshal body", http.StatusBadRequest)
+		return
+	}
 
+	util.CreateUser(u.Username, u.Password)
+	// print the body to the console
+	log.Printf("user: %s", u.Username)
 }
 
 func tempServe() {
@@ -62,11 +73,12 @@ func tempServe() {
 	if errors.Is(err, http.ErrServerClosed) {
 		fmt.Printf("server closed\n")
 	} else if err != nil {
-		fmt.Printf("error starting server: %s\n", err)
+		log.Fatal("error starting server: %s\n", err)
 		os.Exit(1)
 	}
 }
 
 func main() {
+	log.Println("Starting the server")
 	tempServe()
 }
