@@ -1,7 +1,6 @@
 {
   "name": "@mumble/client",
   "private": true,
-  "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -9,6 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@mumble/interface": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

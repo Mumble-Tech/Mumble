@@ -1,0 +1,5 @@
+packages:
+  # Executable Data
+  - 'client:*'
+  - 'desktop:*'
+  - 'packages:*'

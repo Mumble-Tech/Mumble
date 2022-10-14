@@ -10,9 +10,11 @@
 *.sw?
 
 
+
 # Node.js / React
 node_modules
 *yarn.lock
+*pnpm-lock.yaml
 
 # Golang
 *.sql
@@ -31,7 +33,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-lerna-debug.log*
 
 node_modules
 dist

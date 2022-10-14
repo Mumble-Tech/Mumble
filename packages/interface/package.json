@@ -1,12 +1,11 @@
 {
   "name": "@mumble/interface",
-  "version": "1.0.0",
   "description": "Interface for Mumble web && Mumble app ",
   "main": "index.ts",
   "repository": "https://github.com/Mumble-Tech/Mumble.git",
   "author": "deondreE <deondreenglish45@gmail.com>",
   "private": true,
-  "devDependencies":{ 
+  "devDependencies": {
     "@types/node": "^18.8.5",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
@@ -18,6 +17,7 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "interface": "workspace:*",
     "react-icons": "^4.4.0"
   }
 }
