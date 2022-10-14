@@ -22,3 +22,10 @@ model roles {
   desc String
   color String
 }
+
+model settings {
+  id Int @id @default(autoincrement())
+  displayName String?
+  description String
+  updatedAt DateTime @updatedAt
+}
