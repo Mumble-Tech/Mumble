@@ -1,5 +1,5 @@
 // import { useState } from "react";
-// import { invoke } from "@tauri-apps/api/tauri";
+import { invoke } from "@tauri-apps/api/tauri";
 import "./App.css";
 
 function App() {
@@ -11,10 +11,14 @@ function App() {
   //   setGreetMsg(await invoke("greet", { name }));
   // }
 
+  async function record () {
+    await invoke("StartScreenRecording");
+  }
+
   return (
-    <div>
-      Welcome to the Software for Streaming to Mumble!
-    </div>
+    <button onClick={record}>
+      Test
+    </button>
   );
 }
 
