@@ -1,6 +1,10 @@
 # Use postgres/example user/password credentials
 version: '3.1'
 
+networks:
+  local-network:
+    driver: bridge
+
 services:
 
   db:
@@ -12,3 +16,12 @@ services:
       POSTGRES_DB: mumbleDB
     ports:
       - 5432:5432
+  
+  redis:
+    image: 'bitnami/redis:latest'
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+    networks:
+      - local-network
+    ports:
+      - '6379'

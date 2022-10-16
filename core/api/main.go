@@ -11,6 +11,7 @@ import (
 	"net/http"
 	"os"
 
+	socketio "github.com/googollee/go-socket.io"
 	"github.com/gorilla/mux"
 	log "github.com/sirupsen/logrus"
 )
@@ -56,8 +57,17 @@ func createUserRoute(w http.ResponseWriter, r *http.Request) {
 
 func tempServe() {
 	router := mux.NewRouter()
+	socketServer := util.CreateSocketServer()
+	// route handler
 	router.HandleFunc("/", getRoot)
+	http.Handle("/connect", socketServer)
 	router.HandleFunc("/create/user", createUserRoute)
+
+	// socket server stuff and things
+	socketServer.OnEvent("/chat", "msg", func(s socketio.Conn, msg string) string {
+		s.SetContext(msg)
+		return "recv " + msg
+	})
 
 	ctx := context.Background()
 	server := &http.Server{
