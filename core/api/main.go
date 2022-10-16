@@ -22,6 +22,7 @@ import (
 // User is a struct that represents a user
 type User struct {
 	Username string `json:"username"`
+	Email    string `json:"email"`
 	Password string `json:"password"`
 }
 
@@ -50,7 +51,9 @@ func createUserRoute(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	util.CreateUser(u.Username, u.Password)
+	log.Printf("passw: %s", util.HashPassword(u.Password))
+	// Create the user
+
 	// print the body to the console
 	log.Printf("user: %s", u.Username)
 }
@@ -60,6 +63,7 @@ func tempServe() {
 	socketServer := util.CreateSocketServer()
 	// route handler
 	router.HandleFunc("/", getRoot)
+	// Specific socket handler for socket server to the frontend.
 	http.Handle("/connect", socketServer)
 	router.HandleFunc("/create/user", createUserRoute)
 

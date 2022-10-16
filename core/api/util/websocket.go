@@ -4,11 +4,12 @@ import (
 	"fmt"
 
 	socketio "github.com/googollee/go-socket.io"
+	log "github.com/sirupsen/logrus"
 )
 
 // create server
 func CreateSocketServer() *socketio.Server {
-	server := socketio.NewServer(nil)
+	server := socketio.NewServer()
 
 	return server
 }
@@ -16,7 +17,7 @@ func CreateSocketServer() *socketio.Server {
 // connect
 func Connect(s socketio.Conn) error {
 	s.SetContext("")
-	fmt.Println("connected: ", s.ID)
+	log.Info("Connected to socket server")
 	return nil
 }
 
@@ -28,7 +29,7 @@ func SocketChat(s socketio.Conn, msg string) string {
 
 // error
 func SocketError(s socketio.Conn, e error) {
-	fmt.Println("meet error:", e)
+	log.Error(e)
 }
 
 // disconnect

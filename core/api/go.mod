@@ -9,6 +9,8 @@ require (
 	github.com/gomodule/redigo v1.8.9 // indirect
 	github.com/googollee/go-socket.io v1.6.2 // indirect
 	github.com/gorilla/websocket v1.4.2 // indirect
+	golang.org/x/crypto v0.0.0-20221012134737-56aed061732a // indirect
+	github.com/prisma/prisma-client-go v0.16.2 // indirect
 )
 
 require (
