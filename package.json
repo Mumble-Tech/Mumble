@@ -15,9 +15,12 @@
     "prettier-plugin-go-template": "^0.0.13"
   },
   "engines": {
-		"pnpm": "7.13.4",
-		"npm": "pnpm",
-		"yarn": "pnpm",
-		"node": ">=14.0.0"
-	}
+    "pnpm": "7.13.4",
+    "npm": "pnpm",
+    "yarn": "pnpm",
+    "node": ">=14.0.0"
+  },
+  "dependencies": {
+    "packages": "link:/Users/deondreenglish/Projects/Mumble/packages"
+  }
 }
