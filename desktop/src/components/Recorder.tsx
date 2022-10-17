@@ -6,16 +6,13 @@ export const AudioRecorder = () => {
   const recorder = useRecorderPermission("video");
 
   const startRecording = async () => {
-    recorder.startRecording();
-    recorder.previewStream((stream: any) => {
-        <video src={stream}></video>
-    });
+    recorder.startRecording({ screen: true });
   };
 
   const stopRecording = async () => {
     await recorder.stopRecording();
     let blob = await recorder.getBlob();
-    invokeSaveAsDialog(blob, `random_name.webm`);
+    invokeSaveAsDialog(blob, `random_name.mp4`);
   };
 
   return (

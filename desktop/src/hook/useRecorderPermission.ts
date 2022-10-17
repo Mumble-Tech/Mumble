@@ -1,5 +1,5 @@
 import {useState, useEffect } from 'react';
-import RecordRTC, { CanvasRecorder, RecordRTCPromisesHandler } from "recordrtc";
+import RecordRTC, { CanvasRecorder, MediaStreamRecorder, RecordRTCPromisesHandler } from "recordrtc";
 
 export const useRecorderPermission = (
   recordingType: RecordRTC.Options["type"]
@@ -18,7 +18,7 @@ export const useRecorderPermission = (
 
     let recorder = new RecordRTCPromisesHandler(stream, {
       type: recordingType,
-      recorderType: CanvasRecorder
+      recorderType: MediaStreamRecorder
     });
 
     setRecorder(recorder);

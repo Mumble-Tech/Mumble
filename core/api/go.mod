@@ -2,22 +2,23 @@ module api
 
 go 1.19
 
-require github.com/sirupsen/logrus v1.9.0
-
 require (
-	github.com/gofrs/uuid v4.0.0+incompatible // indirect
-	github.com/gomodule/redigo v1.8.9 // indirect
-	github.com/googollee/go-socket.io v1.6.2 // indirect
-	github.com/gorilla/websocket v1.4.2 // indirect
-	golang.org/x/crypto v0.0.0-20221012134737-56aed061732a // indirect
-	github.com/prisma/prisma-client-go v0.16.2 // indirect
+	github.com/gomodule/redigo v1.8.9
+	github.com/googollee/go-socket.io v1.6.2
+	github.com/sirupsen/logrus v1.9.0
+	github.com/zhouhui8915/go-socket.io-client v0.0.0-20200925034401-83ee73793ba4
+	golang.org/x/crypto v0.0.0-20221012134737-56aed061732a
 )
 
 require (
-	github.com/cespare/xxhash/v2 v2.1.2 // indirect
-	github.com/dgryski/go-rendezvous v0.0.0-20200823014737-9f7001d12a5f // indirect
-	github.com/go-redis/redis v6.15.9+incompatible
-	github.com/go-redis/redis/v8 v8.11.5 // indirect
-	github.com/gorilla/mux v1.8.0 // indirect
+	github.com/gofrs/uuid v4.0.0+incompatible // indirect
+	github.com/gorilla/websocket v1.4.2 // indirect
+	github.com/smartystreets/goconvey v1.7.2 // indirect
+	github.com/stretchr/testify v1.8.0 // indirect
+	github.com/zhouhui8915/engine.io-go v0.0.0-20150910083302-02ea08f0971f // indirect
+)
+
+require (
+	github.com/gorilla/mux v1.8.0
 	golang.org/x/sys v0.0.0-20220715151400-c0bba94af5f8 // indirect
 )
