@@ -1,6 +1,8 @@
 package auth
 
 import (
+	errorhandler "api/errorHandler"
+	"context"
 	"crypto/hmac"
 	"crypto/sha256"
 	"encoding/base64"
@@ -8,6 +10,7 @@ import (
 	"fmt"
 	"net/http"
 
+	"server/prisma/db"
 	"strings"
 )
 
@@ -18,17 +21,39 @@ type User struct {
 	createDate   string
 }
 
-// Get user from redis or prisma
-/* func getUserObject(email string) (User, bool) {
-	// needs to be replaces using database
-	for _, user := range userList {
-		if user.email == email {
-			return user, true
-		}
+func createConnection() *db.PrismaClient {
+	client := db.NewClient()
+	if err := client.Prisma.Connect(); err != nil {
+		return nil
 	}
 
-	return {}, false
-} */
+	defer func() {
+		if err := client.Prisma.Disconnect(); err != nil {
+			panic(err)
+		}
+	}()
+
+	return client
+}
+
+func getUserbyEmail(email string) bool {
+	client := createConnection()
+
+	ctx := context.Background()
+
+	user, err := client.Users.FindUnique(
+		db.Users.Email.Equals(email),
+	).Exec(ctx)
+	errorhandler.HandleError(err)
+
+	result, _ := json.MarshalIndent(user, "", " ")
+	fmt.Printf("user: %s\n", result)
+	if result != nil {
+		return true
+	}
+
+	return false
+}
 
 // checks if the password hash is valid
 func (u *User) ValidatePasswordHash(passHash string) bool {
