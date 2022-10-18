@@ -7,6 +7,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
+
 	"strings"
 )
 
@@ -163,6 +164,12 @@ func SignupHandler(rw http.ResponseWriter, r *http.Request) {
 
 // done through prisma
 // TODO: Add prisma client
+
+func validateUser(email string, passwordHash string) (bool, error) {
+	// find a way to get the client here
+	return false, nil
+}
+
 /* func validateUser(email string, passwordHash string) (bool, error) {
 	usr, exists := data.GetUserObject(email)
 	if !exists {
