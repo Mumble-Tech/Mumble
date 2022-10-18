@@ -1,6 +1,7 @@
 package main
 
 import (
+	"api/auth"
 	"api/util"
 	"context"
 	"encoding/json"
@@ -116,6 +117,10 @@ func createUserRoute(w http.ResponseWriter, r *http.Request) {
 
 func tempServe() {
 	router := mux.NewRouter()
+	authRouter := router.PathPrefix("/auth").Subrouter()
+
+	// jwt auth route login / signup handlers
+	authRouter.HandleFunc("/signup", auth.SignupHandler)
 
 	// route handler
 	router.HandleFunc("/", getRoot)
@@ -132,6 +137,8 @@ func tempServe() {
 			return ctx
 		},
 	}
+
+	authRouter.HandleFunc("/signin", auth.SigninHandler)
 
 	err := server.ListenAndServe()
 	if errors.Is(err, http.ErrServerClosed) {

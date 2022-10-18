@@ -12,6 +12,7 @@ require (
 
 require (
 	github.com/gofrs/uuid v4.0.0+incompatible // indirect
+	github.com/golang-jwt/jwt/v4 v4.4.2 // indirect
 	github.com/gorilla/websocket v1.4.2 // indirect
 	github.com/smartystreets/goconvey v1.7.2 // indirect
 	github.com/stretchr/testify v1.8.0 // indirect
