@@ -1,21 +1,33 @@
 {
   "build": {
-    "beforeDevCommand": "yarn dev",
-    "beforeBuildCommand": "yarn build",
+    "beforeDevCommand": "pnpm exec vite --clearScreen=false",
+    "beforeBuildCommand": "pnpm exec vite build",
     "devPath": "http://localhost:1420",
     "distDir": "./dist"
   },
   "package": {
     "productName": "mumble",
-    "version": "0.0.0"
+    "version": "0.0.1"
   },
   "tauri": {
+    "macOSPrivateApi": true,
     "allowlist": {
-      "all": true
+      "all": true,
+      "protocol": {
+        "assetScope": ["*"]
+      },
+      "os": {
+        "all": true
+      },
+      "dialog": {
+        "all": true,
+        "ask": true,
+        "save": true
+      }
     },
     "bundle": {
       "active": true,
-      "category": "DeveloperTool",
+      "category": "Streaming",
       "copyright": "MumbleLLC",
       "deb": {
         "depends": []
@@ -31,16 +43,17 @@
         "icons/logo.png"
       ],
       "identifier": "com.tauri.dev",
-      "longDescription": "",
+      "longDescription": "A cross-platform streaming platform, for the streaming service Mumble",
       "macOS": {
         "entitlements": null,
         "exceptionDomain": "",
+        "minimumSystemVersion": "10.15",
         "frameworks": [],
         "providerShortName": null,
         "signingIdentity": null
       },
       "resources": [],
-      "shortDescription": "",
+      "shortDescription": "Video Streaming made easy...",
       "targets": "all",
       "windows": {
         "certificateThumbprint": null,
@@ -56,12 +69,20 @@
     },
     "windows": [
       {
-        "fullscreen": false,
-        "height": 600,
-        "resizable": true,
-        "title": "Mumble",
-        "width": 800
-      }
+				"title": "Spacedrive",
+				"width": 1200,
+				"height": 725,
+				"minWidth": 700,
+				"minHeight": 500,
+				"resizable": true,
+				"fullscreen": false,
+				"alwaysOnTop": false,
+				"focus": false,
+				"fileDropEnabled": false,
+				"decorations": true,
+				"transparent": true,
+				"center": true
+			}
     ]
   }
 }
