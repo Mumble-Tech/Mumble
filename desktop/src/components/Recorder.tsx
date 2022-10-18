@@ -1,6 +1,6 @@
 
 import { invokeSaveAsDialog } from "recordrtc";
-import { useRecorderPermission } from "../hook/useRecorderPermission";
+import { useRecorderPermission } from "../hooks/useRecorderPermission";
 
 export const AudioRecorder = () => {
   const recorder = useRecorderPermission("video");
