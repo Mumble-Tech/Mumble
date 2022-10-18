@@ -1,6 +1,7 @@
 .titlebar {
-    height: 30px;
-    background: #395E80;
+     padding: 10px;
+    height: 60px;
+    background: #415870;
     user-select: none;
     display: flex;
     justify-content: flex-end;
@@ -13,7 +14,6 @@
   .titlebar-button {
     display: inline-flex;
     justify-content: center;
-    align-items: center;
     width: 30px;
     height: 30px;
   }

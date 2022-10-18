@@ -10,6 +10,9 @@ export default defineConfig({
   clearScreen: false,
   // tauri expects a fixed port, fail if that port is not available
   server: {
+    watch: {
+      usePolling: true,
+    },
     port: 1420,
     strictPort: true,
   },

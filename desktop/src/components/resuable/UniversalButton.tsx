@@ -5,7 +5,7 @@ export function UniversalButton (props: UniversalButtonProps) {
     return (
         <button
             onClick={props.OnClick}
-            className={`${props.className}`}
+            className={`p-4 ${props.className}`}
             placeholder={props.placeholder}
         >
             {props.innerText}
