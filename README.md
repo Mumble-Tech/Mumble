@@ -1,7 +1,7 @@
 # Mumble
 > "Any fool can write code that a computer can understand. Good programmers write code that humans can understand." – Martin Fowler
 
-Mumble is a streaming service for people to stream their Christian Sermon streams to. It aims to solve the problem that some people at churches don’t understand how to use a streaming service, but we also solve the problem of only being able to stream from the U.S. Streaming to Mumble can be done anywhere. 
+Mumble is a streaming service made for everyone. We aim to solve many problems that people face with streaming services. Mumble quickly works no matter your internet speed, is easy for anyone to use; and comes with its own app to stream through. Mumble can be used as a utility to stream anywhere, and from anywhere.![image](https://user-images.githubusercontent.com/67658523/196335327-513f8e99-60be-4185-a3a8-42bb1a2bb358.png)
 
 ---
 
