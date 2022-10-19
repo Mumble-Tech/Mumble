@@ -1,10 +1,10 @@
 {
   "name": "@mumble/interface",
+  "version": "0.0.1",
   "description": "Interface for Mumble web && Mumble app ",
   "main": "index.ts",
   "repository": "https://github.com/Mumble-Tech/Mumble.git",
   "author": "deondreE <deondreenglish45@gmail.com>",
-  "private": true,
   "devDependencies": {
     "@types/node": "^18.8.5",
     "@types/react": "^18.0.21",
