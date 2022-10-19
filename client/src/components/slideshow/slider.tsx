@@ -3,7 +3,7 @@ import { Slide } from "react-slideshow-image";
 import slideImages from "./data/images";
 
 import "react-slideshow-image/dist/styles.css";
-import styles from "./Slider.module.css";
+import styles from "./slider.module.css";
 
 export default function Slider() {
   return (
