@@ -57,9 +57,13 @@ export default function Roadmap () {
                 <Box>
                     <Stack w='auto' className='mt-6'>    
                         {/* <Progress value={10} /> */}
-                        <Stage pText='Use the Mumble streaming app to record your screen and save it to different file formats' hText='Recording the Screen' width='45%'/>
-                        <Stage pText='Use the Mumble streaming app to stream to the web services' hText='Streaming to the website'  width='50%'/>
-                        <Stage pText='Use the Mumble streaming app to stream to the web services' hText='Watching the Stream ( Maybe Commets! )'  width='55%'/>
+                        <Stage pText='Use the website to stream video content in multiple resolutions.' hText='Streaming Video' width='45%'/>
+                        <Stage pText='Optionally be able to download video content off of the website' hText='Optional Download'  width='50%'/>
+                        <Stage pText='Use the administration panel to check statistics, and upload new videos of premade content' hText='Upload Videos through the Admin Panel'  width='55%'/>
+                        <Stage pText='Stream live content through the Mumble App' hText='Actually Stream'  width='60%'/>
+                        <Stage pText='Use the Mumble app not only to stream content but also to adjust in real time what is on the consumers screen' hText='Preview the Live Stream'  width='65%'/>
+                        <Stage pText='Add Graphics, and Text to the screen live' hText='Add content to Stream'  width='70%'/>
+                        <Stage pText='Record audio and video to file.' hText='Record to File'  width='75%'/>
                     </Stack>
                 </Box>
             </div>

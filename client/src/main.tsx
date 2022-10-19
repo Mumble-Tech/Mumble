@@ -5,7 +5,6 @@ import './index.css'
 // import Landing from './Landing'
 
 // Routes
-import Contact from './views/contact';
 import Roadmap from './views/roadmap';
 import Landing from './Landing';
 
@@ -25,7 +24,6 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
         <Routes>
           <Route path='/' element={<Landing />} />
           <Route path='/roadmap' element={<Roadmap />} />
-          <Route path='/contact' element={<Contact />} />
         </Routes>
       </BrowserRouter>
     </ChakraProvider>

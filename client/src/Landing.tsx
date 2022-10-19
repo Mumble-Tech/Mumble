@@ -1,8 +1,21 @@
 import './App.css';
-import { Heading, NavContainer, FooterContainer, Description } from '@mumble/interface';
+import { Heading, NavContainer, FooterContainer, Description, TextInput } from '@mumble/interface';
 import { Center, Button, CircularProgress, Box, SkeletonText, SkeletonCircle } from '@chakra-ui/react';
-import { Link } from 'react-router-dom';
 import { useState } from 'react';
+
+import {
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+  PopoverHeader,
+  PopoverBody,
+  PopoverFooter,
+  PopoverArrow,
+  PopoverCloseButton,
+  PopoverAnchor,
+  Stack
+} from '@chakra-ui/react'
+import Slider from './components/slideshow/slider';
 
 function Landing() {
   const [click, setClick] = useState(false);
@@ -32,17 +45,37 @@ function Landing() {
       
         <Center>
           {!click && (
-            <Button onClick={() => {setClick(!click)}} bg='#9ED2C6' w='30vw' h='8vh'>Continue to Mumble</Button>
+            <Stack>
+              {/* <Button onClick={() => {setClick(!click)}} bg='#9ED2C6' w='30vw' h='8vh'>Continue to Mumble</Button> */}
+                <Popover>
+                  <PopoverTrigger>
+                    <Button bg='#9ED2C6' w='30vw' h='8vh'>Join the Email List</Button>
+                  </PopoverTrigger>
+                  <PopoverContent>
+                    <PopoverArrow />
+                    <PopoverCloseButton />
+                    <PopoverHeader>We will email you with updates</PopoverHeader>
+                    <PopoverBody>
+                      <TextInput placeholder='email' bgColor='#FFFFFF' className='p-4 w-full mb-2 border rounded-md border-gray-200'></TextInput>
+                      <Button>Submit</Button>
+                    </PopoverBody>
+                  </PopoverContent>
+                </Popover>
+            </Stack>
+              
           )}
-          {click && (
-            <CircularProgress isIndeterminate color='green.300' />
+          {click && ( 
+            <>
+              <CircularProgress isIndeterminate color='green.300' />
+            </>
+            
           )}
         </Center>
 
-        <Box padding='6' boxShadow='lg' bg='white' className='mt-10'>
-          <SkeletonCircle size='10' />
-          <SkeletonText mt='4' noOfLines={4} spacing='4' />
-        </Box>
+        {/* Join the Email List */}
+        <Center>
+          <Slider />
+        </Center>
       </div>
     </>
   );

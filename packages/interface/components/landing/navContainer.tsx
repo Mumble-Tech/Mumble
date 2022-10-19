@@ -19,15 +19,15 @@ export const NavContainer = () => {
     return (
         <Breadcrumb spacing='8px'>
             <BreadcrumbItem isCurrentPage>
-                <BreadcrumbLink href='#'>home</BreadcrumbLink>
+                <BreadcrumbLink href='/'>home</BreadcrumbLink>
             </BreadcrumbItem>
         
             <BreadcrumbItem>
-                <BreadcrumbLink href='#'>roadmap</BreadcrumbLink>
+                <BreadcrumbLink href='/roadmap'>roadmap</BreadcrumbLink>
             </BreadcrumbItem>
         
             <BreadcrumbItem>
-                <BreadcrumbLink href='#'>contact</BreadcrumbLink>
+                <BreadcrumbLink href='/contact'>contact</BreadcrumbLink>
             </BreadcrumbItem>
       </Breadcrumb>
     )
