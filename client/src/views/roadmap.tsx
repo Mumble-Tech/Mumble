@@ -2,7 +2,6 @@ import React from 'react';
 import '../App.css'
 
 import {Box, Progress, Stack, Center, Image} from '@chakra-ui/react';
-import { Heading, NavContainer } from '@mumble/interface';
 import {
     Breadcrumb,
     BreadcrumbItem,
@@ -56,10 +55,9 @@ export default function Roadmap () {
              
             <Center>
                 <Stack>
-                    <Heading 
-                        innerText='What’s next for Mumble?'
-                        className='text-6xl mt-6'
-                    />
+                <Center>
+                    <h1 className='text-6xl font-regular flex justify-center p-2 ml-10 mb-6'>What’s next for Mumble?</h1>
+                </Center>
                     <p className='text-1xl mb-6' style={{ color: '#7FBCD2' }}>Here is a list of the features we are working on, and the progress we have made so far.</p>
                 </Stack>
             </Center>
