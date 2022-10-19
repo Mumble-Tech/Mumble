@@ -1,14 +1,22 @@
 import './App.css';
-import { Heading, NavContainer, FooterContainer, Button, Description } from '@mumble/interface';
+import { Heading, NavContainer, FooterContainer, Description } from '@mumble/interface';
+import { Center, Button, CircularProgress, Box, SkeletonText, SkeletonCircle } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 function Landing() {
+  const [click, setClick] = useState(false);
+
+  if (click)
+    console.log('worked');
+    
+
   return (
     <>
-      <div className='col flex-stack justify-center mr-4'>
-        <NavContainer>
-          <Link to='/roadmap' className='p-4 hover:underline ml-12'>roadmap</Link>
-        </NavContainer>
+      <div className='col flex-stack justify-center mr-4 header-text'>
+        <header className='p-4 ml-12 w-full h-full'>
+            <NavContainer />
+        </header>
 
         <Heading 
           innerText='Welcome to Mumble' 
@@ -22,19 +30,19 @@ function Landing() {
           className='text-2xl p-8 text-center ml-6 module 2'
         />
       
-        <Button 
-            className='text-center p-4 mt-20 btn-continue rounded-md flex justify-center'
-            innerText='Continue to Mumble....'
-        />
+        <Center>
+          {!click && (
+            <Button onClick={() => {setClick(!click)}} bg='#9ED2C6' w='30vw' h='8vh'>Continue to Mumble</Button>
+          )}
+          {click && (
+            <CircularProgress isIndeterminate color='green.300' />
+          )}
+        </Center>
 
-        <FooterContainer>
-          <Button 
-            className='sticky top-[100]vh text-center ml-12 mt-56 copyright'
-            innerText='contact'
-          />
-          <p className='sticky top-[100]vh text-center ml-52 mt-56 copyright'> ©MumbleLLC</p>
-        </FooterContainer>
-
+        <Box padding='6' boxShadow='lg' bg='white' className='mt-10'>
+          <SkeletonCircle size='10' />
+          <SkeletonText mt='4' noOfLines={4} spacing='4' />
+        </Box>
       </div>
     </>
   );

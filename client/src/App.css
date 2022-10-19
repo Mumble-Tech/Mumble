@@ -3,6 +3,10 @@ body {
   background-color: #FBFAF5 !important;
 }
 
+.header-text {
+  font-family: 'Kodchasan', sans-serif;
+}
+
 .btn-continue {
   border: 1px solid #9ED2C6;
   background-color: #9ED2C6;

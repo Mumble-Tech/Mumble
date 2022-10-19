@@ -15,15 +15,19 @@ import {
   Route,
 } from "react-router-dom";
 
+import { ChakraProvider } from '@chakra-ui/react';
+
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<Landing />} />
-        <Route path='/roadmap' element={<Roadmap />} />
-        <Route path='/contact' element={<Contact />} />
-      </Routes>
-    </BrowserRouter>
+    <ChakraProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Landing />} />
+          <Route path='/roadmap' element={<Roadmap />} />
+          <Route path='/contact' element={<Contact />} />
+        </Routes>
+      </BrowserRouter>
+    </ChakraProvider>
   </React.StrictMode>
 )

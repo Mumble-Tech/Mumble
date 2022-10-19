@@ -1,14 +1,12 @@
 import React from 'react';
 import { NavContainer, Heading, Button, TextArea, TextInput, FooterContainer } from '@mumble/interface';
 
-import { Link } from 'react-router-dom';
-
 export default function Contact () {
     return (
         <div>
-            <NavContainer>
-                <Link to='/' className='p-4 hover:underline ml-12'>home</Link>
-            </NavContainer>
+            <header className='p-4 ml-12 w-full h-full'>
+                <NavContainer />
+            </header>
 
             <Heading 
                 innerText='Contact' 

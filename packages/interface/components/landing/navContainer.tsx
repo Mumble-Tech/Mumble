@@ -1,4 +1,11 @@
 import React from 'react';
+import {
+    Breadcrumb,
+    BreadcrumbItem,
+    BreadcrumbLink,
+    BreadcrumbSeparator,
+  } from '@chakra-ui/react'
+
 
 interface NavContainer {
     children: React.ReactNode;
@@ -8,10 +15,20 @@ interface NavContainer {
     className?: string;
 }
 
-export const NavContainer = (props: NavContainer) => {
+export const NavContainer = () => {
     return (
-        <div className='flex justify-between'>
-            {props.children}
-        </div>
+        <Breadcrumb spacing='8px'>
+            <BreadcrumbItem isCurrentPage>
+                <BreadcrumbLink href='#'>home</BreadcrumbLink>
+            </BreadcrumbItem>
+        
+            <BreadcrumbItem>
+                <BreadcrumbLink href='#'>roadmap</BreadcrumbLink>
+            </BreadcrumbItem>
+        
+            <BreadcrumbItem>
+                <BreadcrumbLink href='#'>contact</BreadcrumbLink>
+            </BreadcrumbItem>
+      </Breadcrumb>
     )
 }
