@@ -3,6 +3,12 @@ import '../App.css'
 
 import {Box, Progress, Stack, Center, Image} from '@chakra-ui/react';
 import { Heading, NavContainer } from '@mumble/interface';
+import {
+    Breadcrumb,
+    BreadcrumbItem,
+    BreadcrumbLink,
+    BreadcrumbSeparator,
+  } from '@chakra-ui/react'
 
 import image from '../assets/Vector.svg';
 
@@ -27,7 +33,19 @@ export default function Roadmap () {
     return (
         <>
             <header className='p-4 ml-12 w-full h-full'>
-                <NavContainer />
+                <Breadcrumb spacing='8px'>
+                    <BreadcrumbItem isCurrentPage>
+                        <BreadcrumbLink href='/'>home</BreadcrumbLink>
+                    </BreadcrumbItem>
+                
+                    <BreadcrumbItem>
+                        <BreadcrumbLink href='/roadmap'>roadmap</BreadcrumbLink>
+                    </BreadcrumbItem>
+                
+                    <BreadcrumbItem>
+                        <BreadcrumbLink href='/contact'>contact</BreadcrumbLink>
+                    </BreadcrumbItem>
+                </Breadcrumb>
             </header>
 
              {/* Huge Icon Placeholder */}
