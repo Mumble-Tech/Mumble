@@ -1,0 +1,12 @@
+blank_issues_enabled: false
+contact_links:
+    - name: 📝 Report Typo
+      url:
+      about: If you find  a typo, let us know in the typos disucssion thread.
+    - name: ⬇️  Get Help
+      url:
+      about: If you can't get something to work the way you expect, open a question in our dicussion forums.
+    - name: 💡 Feature Request
+      url:
+      about: Suggest any ideas you have using our disucssion forums.
+
