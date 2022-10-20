@@ -13,8 +13,6 @@
 
 # Node.js / React
 node_modules
-*yarn.lock
-*pnpm-lock.yaml
 
 # Golang
 *.sql
