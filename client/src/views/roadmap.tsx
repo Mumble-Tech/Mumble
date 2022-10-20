@@ -1,13 +1,17 @@
 import React from 'react';
 import '../App.css'
-
-import {Box, Progress, Stack, Center, Image} from '@chakra-ui/react';
 import {
+    Box, 
+    Progress, 
+    Stack, 
+    Center, 
+    Image,
     Breadcrumb,
     BreadcrumbItem,
     BreadcrumbLink,
-    BreadcrumbSeparator,
-  } from '@chakra-ui/react'
+  } from '@chakra-ui/react';
+
+  import { Link } from 'react-router-dom';
 
 import image from '../assets/Vector.svg';
 
@@ -34,15 +38,14 @@ export default function Roadmap () {
             <header className='p-4 ml-12 w-full h-full'>
                 <Breadcrumb spacing='8px'>
                     <BreadcrumbItem isCurrentPage>
-                        <BreadcrumbLink href='/'>home</BreadcrumbLink>
+                        <BreadcrumbLink><Link to='/'>home</Link></BreadcrumbLink>
                     </BreadcrumbItem>
                 
                     <BreadcrumbItem>
-                        <BreadcrumbLink href='/roadmap'>roadmap</BreadcrumbLink>
+                        <BreadcrumbLink><Link to='/roadmap'>roadmap</Link></BreadcrumbLink>
                     </BreadcrumbItem>
                 
                     <BreadcrumbItem>
-                        <BreadcrumbLink href='/contact'>contact</BreadcrumbLink>
                     </BreadcrumbItem>
                 </Breadcrumb>
             </header>

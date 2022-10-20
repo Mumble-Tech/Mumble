@@ -1,24 +1,27 @@
 import './App.css';
-import { Center, Button, CircularProgress, Input } from '@chakra-ui/react';
 import { useState } from 'react';
 
 import {
+  Center, 
+  Button, 
+  CircularProgress, 
+  Input,
   Popover,
   PopoverTrigger,
   PopoverContent,
   PopoverHeader,
   PopoverBody,
-  PopoverFooter,
   PopoverArrow,
   PopoverCloseButton,
-  PopoverAnchor,
-  Stack
-} from '@chakra-ui/react'
-import {
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbLink,
-} from '@chakra-ui/react'
+  Stack
+} from '@chakra-ui/react';
+
+import { Link } from 'react-router-dom';
+
+
 import Slider from './components/slideshow/slider';
 
 function Landing() {
@@ -34,21 +37,23 @@ function Landing() {
       <header className='p-4 ml-12 w-full h-full'>
         <Breadcrumb spacing='8px'>
             <BreadcrumbItem isCurrentPage>
-                <BreadcrumbLink href='/'>home</BreadcrumbLink>
+              <BreadcrumbLink><Link to='/'>home</Link></BreadcrumbLink>
             </BreadcrumbItem>
         
             <BreadcrumbItem>
-                <BreadcrumbLink href='/roadmap'>roadmap</BreadcrumbLink>
+              <BreadcrumbLink><Link to='/roadmap'>roadmap</Link></BreadcrumbLink>
             </BreadcrumbItem>
         
             <BreadcrumbItem>
-                <BreadcrumbLink href='/contact'>contact</BreadcrumbLink>
+                
             </BreadcrumbItem>
         </Breadcrumb>
         </header>
 
         <Center>
-          <h1 className='text-6xl font-regular flex justify-center p-2 ml-10 mb-6'>Welcome to Mumble</h1>
+          <div className='header-text'>
+            <h1 className='text-6xl font-regular flex justify-center p-2 ml-10 mb-6'>Welcome to Mumble</h1>
+          </div>
         </Center>
           <p className='text-1xl font-regular flex justify-center p-2 ml-10 mb-10'>Mumble is a streaming service for people to stream their Christian Sermon streams to. It aims to solve the problem that some people at churches don’t understand how to use a streaming service, but we also solve the problem of only being able to stream from the U.S. Streaming to Mumble can be done anywhere.  </p>
         <Center>
@@ -70,7 +75,7 @@ function Landing() {
                     <PopoverHeader>We will email you with updates</PopoverHeader>
                     <PopoverBody>
                       <Input placeholder='email' bgColor='#FFFFFF' className='p-4 w-full mb-2 border rounded-md border-gray-200' />
-                      <Button>Submit</Button>
+                      <Button onClick={() => { setClick(!click) }}>Submit</Button>
                     </PopoverBody>
                   </PopoverContent>
                 </Popover>
