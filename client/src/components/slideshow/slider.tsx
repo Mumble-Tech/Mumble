@@ -7,13 +7,13 @@ import styles from "./slider.module.css";
 
 export default function Slider() {
   return (
-    <div className='w-full h-96 p-8'>
+    <div className='w-full h-96 p-6 ml-8'>
       <Slide easing="ease">
         {slideImages.map((slide: any, index: any) => {
           return (
             <div className={styles.slide} key={slide}>
-              <div style={{ backgroundImage: `url(${slideImages[index]})` }}>
-                <span>Slide {index + 1}</span>
+              <div style={{ backgroundImage: `url(${slideImages[index + 1]})` }}>
+                {/* <span>Slide {index + 1}</span> */}
               </div>
             </div>
           );

@@ -52,10 +52,10 @@ function Landing() {
 
         <Center>
           <div className='header-text'>
-            <h1 className='text-6xl font-regular flex justify-center p-2 ml-10 mb-6'>Welcome to Mumble</h1>
+            <h1 className='text-6xl font-regular flex justify-center p-2 ml-10 mb-6 font-medium font-serif text-orange-300 '>Welcome to Mumble</h1>
           </div>
         </Center>
-          <p className='text-1xl font-regular flex justify-center p-2 ml-10 mb-10'>Mumble is a streaming service for people to stream their Christian Sermon streams to. It aims to solve the problem that some people at churches don’t understand how to use a streaming service, but we also solve the problem of only being able to stream from the U.S. Streaming to Mumble can be done anywhere.  </p>
+          <p className='text-2xl font-regular flex justify-center p-2 ml-10 mb-10 text-center font-serif text-purple-400'>Mumble is a streaming service for people to stream their Christian Sermon streams to. It aims to solve the problem that some people at churches don’t understand how to use a streaming service, but we also solve the problem of only being able to stream from the U.S. Streaming to Mumble can be done anywhere.  </p>
         <Center>
 
         </Center>
@@ -67,14 +67,14 @@ function Landing() {
             <Stack>
                 <Popover>
                   <PopoverTrigger>
-                    <Button bg='#9ED2C6' w='30vw' h='8vh'>Join the Email List</Button>
+                    <Button w='30vw' bg='#fb923c' h='8vh'>Join the Email List</Button>
                   </PopoverTrigger>
                   <PopoverContent>
                     <PopoverArrow />
                     <PopoverCloseButton />
                     <PopoverHeader>We will email you with updates</PopoverHeader>
                     <PopoverBody>
-                      <Input placeholder='email' bgColor='#FFFFFF' className='p-4 w-full mb-2 border rounded-md border-gray-200' />
+                      <Input type='email' placeholder='email' bgColor='#FFFFFF' className='p-4 w-full mb-2 border rounded-md border-gray-200' />
                       <Button onClick={() => { setClick(!click) }}>Submit</Button>
                     </PopoverBody>
                   </PopoverContent>
