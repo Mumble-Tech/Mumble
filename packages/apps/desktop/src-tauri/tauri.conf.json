@@ -1,16 +1,16 @@
 {
   "build": {
-    "beforeDevCommand": "pnpm dev",
-    "beforeBuildCommand": "pnpm build",
+    "beforeDevCommand": "pnpm exec vite --clearScreen=false --mode development",
+    "beforeBuildCommand": "pnpm exec vite build",
     "devPath": "http://localhost:1420",
-    "distDir": "../dist",
-    "withGlobalTauri": false
+    "distDir": "../dist"
   },
   "package": {
-    "productName": "desktop",
-    "version": "0.0.0"
+    "productName": "Mumble",
+    "version": "0.0.1"
   },
   "tauri": {
+    "macOsPrivateApi": true,
     "allowlist": {
       "all": true
     },
@@ -33,6 +33,7 @@
       "longDescription": "",
       "macOS": {
         "entitlements": null,
+        "minimumSystemVersion": "10.15", 
         "exceptionDomain": "",
         "frameworks": [],
         "providerShortName": null,
@@ -54,13 +55,21 @@
       "active": false
     },
     "windows": [
-      {
-        "fullscreen": false,
-        "height": 600,
-        "resizable": true,
-        "title": "desktop",
-        "width": 800
-      }
-    ]
+			{
+				"title": "Mumble",
+				"width": 1400,
+				"height": 725,
+				"minWidth": 700,
+				"minHeight": 500,
+				"resizable": true,
+				"fullscreen": false,
+				"alwaysOnTop": false,
+				"focus": false,
+				"visible": true,
+				"decorations": true,
+				"transparent": true,
+				"center": true
+			}
+		]
   }
 }
