@@ -10,7 +10,7 @@ function Landing() {
     <div className=''>            
       <Heading innerText='Welcome...' />  
       <Container className=''>    
-        <div className='lg:fixed lg:left-[3rem] lg:w-[42vw] lg:h-[60%] lg:mt-2 lg:top-[8rem] lg:max-w-xl lg:p-12 sm:p-10 border rounded-lg h-auto  shadow-lg sm:max-w-md sm:w-screen container-1' style={{ backgroundColor: '#98694F', border: '1px solid #98694F' }}>
+        <div className='lg:fixed lg:left-[3rem] lg:w-[42vw] lg:h-[60%] lg:mt-2 lg:top-[10rem] lg:max-w-xl lg:p-12 sm:p-10 border rounded-lg h-auto  shadow-lg sm:max-w-md sm:w-screen container-1' style={{ backgroundColor: '#98694F', border: '1px solid #98694F' }}>
           <SubHeading innerText='What is mumble?' />
           <Description innerText='Mumble is a streaming service for low internet
                                   economies, so that they can expirence the vast
