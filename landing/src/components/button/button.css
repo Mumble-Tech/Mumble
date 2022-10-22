@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+.button {
+    border: 1px solid #66462F;
+    font-family: 'Jua', sans-serif;
+    font-size: 28px;
+}
