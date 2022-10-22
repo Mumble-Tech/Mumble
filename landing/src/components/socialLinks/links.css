@@ -8,3 +8,11 @@
 .img {
     align-items: center;
 }
+
+@media (min-width: 380px) {
+    .footer {
+        position: absolute;
+        margin-top: 30em;
+        margin-left: 0;
+    }
+  }

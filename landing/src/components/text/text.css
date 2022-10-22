@@ -4,9 +4,17 @@
 
 .heading {
     color: #363636;
-    font-size: 6rem;
+    font-size: min(4rem, 6rem);
+    padding: max(6rem, 2rem);
     font-weight: bolder;
     font-family: 'Jua', sans-serif;
+}
+
+.t-lg {
+  font-size: 30px;  
+}
+.t-sm {
+    font-size: 22px;  
 }
 
 .subheading {
@@ -19,7 +27,14 @@
 
 .description {
     font-family: 'Kalam', cursive;
-    font-size: 18px;
+    font-size: 18px;    
     color: white;
     padding: 2px;
 }
+
+@media (min-width: 380px) {
+    .heading {
+        font-size: 5rem;
+        padding: 4px;
+    }
+ }
