@@ -8,16 +8,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@chakra-ui/react": "^2.3.6",
-    "@emotion/react": "^11",
-    "@emotion/styled": "^11",
-    "firebase": "^9.12.1",
-    "framer-motion": "^6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^4.6.0",
     "react-router-dom": "^6.4.2",
-    "react-slideshow-image": "^4.0.5",
-    "socket.io-client": "^4.5.3",
     "ws": "^8.9.0"
   },
   "devDependencies": {
