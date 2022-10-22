@@ -4,21 +4,18 @@ import slideImages from "./data/images";
 
 import "react-slideshow-image/dist/styles.css";
 import styles from "./slider.module.css";
+import { Image } from "@chakra-ui/react";
 
 export default function Slider() {
   return (
-    <div className='w-full h-96 p-6 ml-8'>
-      <Slide easing="ease">
-        {slideImages.map((slide: any, index: any) => {
-          return (
+      <div className='w-full h-96 mt-10'>
+        <Slide easing="ease" cssClass="bg-slate-300">
+          {slideImages.map((slide: any, index: any) => (
             <div className={styles.slide} key={slide}>
-              <div style={{ backgroundImage: `url(${slideImages[index + 1]})` }}>
-                {/* <span>Slide {index + 1}</span> */}
-              </div>
+              <Image src={slideImages[index]} />
             </div>
-          );
-        })}
-      </Slide>
-    </div>
+          ))}
+        </Slide>
+      </div>
   );
 }

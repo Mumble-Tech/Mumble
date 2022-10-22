@@ -26,14 +26,17 @@ import Slider from './components/slideshow/slider';
 
 function Landing() {
   const [click, setClick] = useState(false);
+  const [playing, setPlaying] = useState(false);
 
-  if (click)
-    console.log('worked');
-    
+  if (playing) {
+    setTimeout(() => {
+      alert('saved the email! Thanks! 🎉')
+    }, 1000);
+  }
 
   return (
     <>
-      <div className='col flex-stack justify-center mr-4 header-text'>
+      <div className='col flex-stack justify-center mr-4 header-text bg-slate-300'>
       <header className='p-4 ml-12 w-full h-full'>
         <Breadcrumb spacing='8px'>
             <BreadcrumbItem isCurrentPage>
@@ -52,12 +55,12 @@ function Landing() {
 
         <Center>
           <div className='header-text'>
-            <h1 className='text-6xl font-regular flex justify-center p-2 ml-10 mb-6 font-medium font-serif text-orange-300 '>Welcome to Mumble</h1>
+            <h1 className='text-6xl font-regular flex justify-center p-4 ml-10 font-medium text-orange-400 '>Welcome to Mumble</h1>
           </div>
         </Center>
-          <p className='text-2xl font-regular flex justify-center p-2 ml-10 mb-10 text-center font-serif text-purple-400'>Mumble is a streaming service for people to stream their Christian Sermon streams to. It aims to solve the problem that some people at churches don’t understand how to use a streaming service, but we also solve the problem of only being able to stream from the U.S. Streaming to Mumble can be done anywhere.  </p>
+          
         <Center>
-
+        <p className='text-2xl font-regular flex justify-center p-2 ml-10 mb-10 text-center font-serif text-purple-400'>Mumble is a streaming service for people to stream their Christian Sermon streams to. It aims to solve the problem that some people at churches don’t understand how to use a streaming service, but we also solve the problem of only being able to stream from the U.S. Streaming to Mumble can be done anywhere.  </p>
         </Center>
 
         <hr className='flex justify-center  ml-24 mb-10 border-black rounded-sm w80'/>
@@ -75,7 +78,10 @@ function Landing() {
                     <PopoverHeader>We will email you with updates</PopoverHeader>
                     <PopoverBody>
                       <Input type='email' placeholder='email' bgColor='#FFFFFF' className='p-4 w-full mb-2 border rounded-md border-gray-200' />
-                      <Button onClick={() => { setClick(!click) }}>Submit</Button>
+                      <Button onClick={() => { 
+                        setClick(!click);
+                        setPlaying(!playing)
+                        }}>Submit</Button>
                     </PopoverBody>
                   </PopoverContent>
                 </Popover>
@@ -84,7 +90,7 @@ function Landing() {
           )}
           {click && ( 
             <>
-              <CircularProgress isIndeterminate color='green.300' />
+              <CircularProgress isIndeterminate color='green.300' onCanPlay={() => {}} />
             </>
             
           )}

@@ -34,7 +34,7 @@ const Stage = (props: prop) => {
 
 export default function Roadmap () {
     return (
-        <>
+        <div className='bg-slate-300'>
             <header className='p-4 ml-12 w-full h-full'>
                 <Breadcrumb spacing='8px'>
                     <BreadcrumbItem isCurrentPage>
@@ -87,6 +87,6 @@ export default function Roadmap () {
                 </Box>
             </div>
             
-        </>
+        </div>
     );
 }
