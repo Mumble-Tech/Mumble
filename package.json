@@ -13,7 +13,9 @@
   "devDependencies": {
     "lerna": "^6.0.0",
     "prettier": "^2.7.1",
-    "prettier-plugin-go-template": "^0.0.13"
+    "prettier-plugin-go-template": "^0.0.13",
+    "turbo": "^1.6.1",
+    "typescript": "*"
   },
   "engines": {
     "pnpm": "7.13.4",
