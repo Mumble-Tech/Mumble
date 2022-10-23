@@ -15,3 +15,8 @@ fn main() {
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }
+
+// TODO: Understand the devices connected to the device
+fn get_devices_connected() {
+
+}
