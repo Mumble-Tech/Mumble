@@ -5,6 +5,10 @@ body {
   background-color: #E9CBA7 !important;
 }
 
+html {
+  background-color: #E9CBA7 !important;
+}
+
 .over {
   overflow: scroll;
   height: auto;

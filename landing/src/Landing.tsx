@@ -5,6 +5,8 @@ import { Container } from './components/container/Container';
 import { SocialLinkNav } from './components/socialLinks/LinkNav';
 import { Button } from './components/button/Button';
 
+import mumbleapp from './assets/mumbleapp.png';
+
 function Landing() {
   return (
     <div className=''>            
@@ -26,15 +28,8 @@ function Landing() {
       </Container>   
       <Container className=''> 
         <div className='lg:fixed lg:right-20 lg:top-0 mx-w-md lg:w-[45%] sm:h-auto lg:h-[90%] lg:text-3xl sm:w-screen p-12 text-left rounded-lg shadow-lg sm:mt-96 lg:mt-8' style={{ backgroundColor: '#CA9E7B', border: '1px solid #CA9E7B' }}>
-          <Description innerText='Mumble is a streaming service for people with 
-                                  low internet environments. We aim to solve the 
-                                  problem of people not being able to access video
-                                  streaming world-wide. Mumble started as a passion,
-                                  and as a realization that people in every country don’t
-                                  expirence streaming in the same way we do. 
-                                  It was that realization that encouraged us to create
-                                  Mumble. Signup for our email notification to get more info
-                                  on the progress of Mumble’s development.' textSize='lg'/>  
+          <SubHeading innerText='Mumble app design' />
+          <img src={mumbleapp} className='border-black rounded-lg sm:w-screen' /> 
           <Button />
         </div>
       </Container> 
