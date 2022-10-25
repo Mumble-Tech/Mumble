@@ -1,0 +1,31 @@
+
+.content-drawer {
+    background-color: #0F3D62;
+    padding: 1em;
+
+    &--content {
+        @extend .content-drawer;
+        font-family: 'Courier New', Courier, monospace;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 10px;
+    }
+}
+
+.preview {
+    background-color: #3E394D;
+    padding: 1em;
+
+    &--audio {
+        @extend .preview;
+    }
+
+    &--content {
+        @extend .preview;
+        background-color: #124B79 !important;
+    }
+}
+
+// .scene-structure {
+
+// }
