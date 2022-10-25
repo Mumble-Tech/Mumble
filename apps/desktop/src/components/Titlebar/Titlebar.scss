@@ -49,10 +49,18 @@
     display: flex;
   }
 
-  .active {
-    margin-left: 1em;
+  .scene-link {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
 
-    text-decoration: underline;
+    cursor: pointer;
+
+    &--active {
+      @extend .scene-link;
+
+      margin-left: 1em;
+      text-decoration: underline;
+    }
   }
 
   .img {

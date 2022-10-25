@@ -1,5 +1,5 @@
 
-import './Titlebar.css';
+import './Titlebar.scss';
 import logo from '../../assets/logo.jpg';
 import personIcon from '../../assets/person_icon.svg';
 import circle from '../../assets/circle.svg';
@@ -15,13 +15,13 @@ export const Titlebar = () => {
 
             {/* Editor / Live Links */}
             <div className='links'>
-                <h1>Editor</h1>
-                <h1 className='active'>Live</h1>
+                <h1 className='scene-link'>Editor</h1>
+                <h1 className='scene-link--active'>Live</h1>
             </div>
 
             {/* Live status */}
             <div className=''>
-                <span className='text' style={{ left: '59em'}}>Offline</span>
+                <span className='text' style={{ left: '61em'}}>Offline</span>
                 <img src={circle} style={{ padding: '1.25em', marginTop: '2px'}} className='icon'/>
             </div>
 

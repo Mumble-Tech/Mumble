@@ -8,7 +8,7 @@ mod window;
 
 fn main() {
      // use_camera();
-    window::create_window("Preview Window");
+    // window::create_window("Preview Window");
     tauri::Builder::default()
         .invoke_handler(tauri::generate_handler![record])
         .run(tauri::generate_context!())
