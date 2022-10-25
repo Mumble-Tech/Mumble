@@ -1,7 +1,9 @@
 import './scenecontent.scss';
 
-import { useState, useRef } from 'react';
+import { useRef } from 'react';
 import { SceneList } from './SceneList/SceneList';
+import { useRecoilState } from 'recoil';
+import { contentState } from '../SceneContent/recoil_state';
 
 interface SceneContentProps {
   /** Eventually will be shared using something like redux */
@@ -12,11 +14,13 @@ interface SceneContentProps {
 }
 
 export const SceneContent = (props: SceneContentProps) => {
+  // ! Scene content is going to udpated gloabally, so that the main scene can render the content it wants to.
+
   const dragItem: any = useRef();
   const dragOverItem: any = useRef();
   // This will eventually be a list of Objects, with content iside each of the
   // ex:  { name: 'powerpoint', content: 'the powerpoint data' }
-  const [sceneContent, setSceneContent] = useState(['Camera', 'Powerpoint', 'Text']);
+  const [sceneContent, setSceneContent] = useRecoilState(contentState); // useState(['Camera', 'Powerpoint', 'Text']);
 
   const dragStart = (e: any, position: any) => {
     dragItem.current = position;

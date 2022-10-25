@@ -3,6 +3,7 @@ import { ContentPreview } from './LiveContentPreview/ContentPreview';
 import { SceneContent } from './SceneContent/SceneContent';
 
 export const ContentDrawer = () => {
+
   return (
     <div className="content-drawer">
       Welcome to the Content Drawer

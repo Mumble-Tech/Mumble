@@ -16,6 +16,8 @@
     "@tauri-apps/api": "^1.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hotkeys-hook": "^3.4.7",
+    "recoil": "^0.7.6",
     "sass": "^1.55.0"
   },
   "devDependencies": {
