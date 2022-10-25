@@ -5,4 +5,6 @@ Mumble is a streaming service made for everyone. We aim to solve many problems t
 
 ---
 
+See the [Flow Graph](<img width="479" alt="Screenshot 2022-10-25 at 12 11 57 PM" src="https://user-images.githubusercontent.com/67658523/197838997-268b1766-1a08-465e-9502-37183fb37373.png">)
+
 [See the Roadmap Here](./docs/roadmap.md)
