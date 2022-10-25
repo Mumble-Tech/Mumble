@@ -1,0 +1,20 @@
+.scene-list {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    list-style: decimal-leading-zero;
+    font-size: 1rem;
+
+    &--root {
+        font-family: 'Times New Roman', Times, serif;
+        text-decoration: underline;
+        text-align: left;
+        display: flex;
+        flex-direction: row;
+        font-size: 2rem;
+        padding: 1rem;
+
+        &--img {
+            width: 20px;
+            padding: 6px;
+        }
+    }
+}

@@ -1,5 +1,6 @@
 import './contentdrawer.scss';
 import { ContentPreview } from './LiveContentPreview/ContentPreview';
+import { SceneContent } from './SceneContent/SceneContent';
 
 export const ContentDrawer = () => {
   return (
@@ -8,7 +9,8 @@ export const ContentDrawer = () => {
       <div className="content-drawer--content">
         <div style={{ display: 'grid', gridTemplateColumns: 'auto auto' }}>
           <div className="scene-structure">
-            <span>test the code</span>
+            <span>Test of the content of the scene</span>
+            <SceneContent rootSceneName="Scene Name" />
           </div>
           <div className="preview--content">
             <ContentPreview />
