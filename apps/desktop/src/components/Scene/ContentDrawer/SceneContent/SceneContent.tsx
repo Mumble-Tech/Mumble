@@ -6,7 +6,9 @@ import { SceneList } from './SceneList/SceneList';
 interface SceneContentProps {
   /** Eventually will be shared using something like redux */
   rootSceneName: string;
+  /** Content needs to be public information, or global state. */
   content?: Array<React.ReactNode>;
+  readonly?: boolean;
 }
 
 export const SceneContent = (props: SceneContentProps) => {
@@ -14,7 +16,7 @@ export const SceneContent = (props: SceneContentProps) => {
   const dragOverItem: any = useRef();
   // This will eventually be a list of Objects, with content iside each of the
   // ex:  { name: 'powerpoint', content: 'the powerpoint data' }
-  const [sceneContent, setSceneContent] = useState(['test', 'test1', 'test2']);
+  const [sceneContent, setSceneContent] = useState(['Camera', 'Powerpoint', 'Text']);
 
   const dragStart = (e: any, position: any) => {
     dragItem.current = position;

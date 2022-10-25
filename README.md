@@ -5,4 +5,15 @@ Mumble is a streaming service made for everyone. We aim to solve many problems t
 
 ---
 
+## Contributing
+
+Development of Mumble happends in the open on GitHub, and we are greatful for any contributions to the project. Read below to learn how you can take part in improving Mumble.
+
+- [Contribution Guide](./docs/CONTRIBUTING.md)
+- [Code of Conduct](./docs/CODE_OF_CONDUCT.md)
+
+---
+
+### License
+Mumble is under the [GNU General public license](./LICENSE.md)
 [See the Roadmap Here](./docs/roadmap.md)
