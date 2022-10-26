@@ -8,6 +8,7 @@ import {
   filteredContentState
 } from './ContentDrawer/SceneContent/recoil_state';
 import { useHotkeys } from 'react-hotkeys-hook';
+import { Camera } from './ContentDrawer/SceneContent/SceneList/SceneListChild/Camera';
 
 interface SceneProps {
   sceneName?: string;
@@ -17,21 +18,19 @@ interface SceneProps {
 }
 
 export const Scene = (props: SceneProps) => {
-  const [active, setActive] = useRecoilState(contentDrawerActive);
-
-  useHotkeys('cmd+l', () => {
-    setActive(!active);
-  });
-  const fPress: boolean = useKeyPress('l');
-
   let content = useRecoilValue(filteredContentState);
-  let contentDrawer = useRecoilValue(contentDrawerActive);
 
   return (
-    <div className="scene">
-      <div>h, s, r, f</div>
-      {/* <div>{fPress && <ContentDrawer />}</div> */}
-      {contentDrawer ? <ContentDrawer /> : <></>}
+    // ! Map the content of the scene drawer to the scene.
+    <div className="scene" id="parent-scene">
+      {content.map((index, key) => {
+        switch (index) {
+          case 'Camera':
+            return <Camera key={key} />;
+          default:
+            return <div key={key}></div>;
+        }
+      })}
     </div>
   );
 };

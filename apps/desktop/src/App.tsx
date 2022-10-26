@@ -8,19 +8,33 @@ import { Scene } from './components/Scene/Scene';
 import { Footer } from './components/Footer/Footer';
 
 // State things
-import { RecoilRoot } from 'recoil';
+import { useRecoilState, useRecoilValue } from 'recoil';
+import { contentDrawerActive } from './components/Scene/ContentDrawer/SceneContent/recoil_state';
+import { ContentDrawer } from './components/Scene/ContentDrawer/ContentDrawer';
+import { useHotkeys } from 'react-hotkeys-hook';
 
 function App() {
   // setGreetMsg(await invoke("record"));
+  const [active, setActive] = useRecoilState(contentDrawerActive);
 
+  useHotkeys('cmd+l', () => {
+    setActive(!active);
+  });
+
+  let contentDrawer = useRecoilValue(contentDrawerActive);
+
+  console.log(contentDrawer);
+  
+  
   return (
-    <RecoilRoot>
+    <>
       <Footer />
+      <div>{contentDrawer ? <ContentDrawer /> : <></>}</div>
       <div>
         <Scene />
       </div>
       <Titlebar />
-    </RecoilRoot>
+    </>
   );
 }
 

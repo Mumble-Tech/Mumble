@@ -18,8 +18,8 @@ export const SceneContent = (props: SceneContentProps) => {
 
   const dragItem: any = useRef();
   const dragOverItem: any = useRef();
-  // This will eventually be a list of Objects, with content iside each of the
-  // ex:  { name: 'powerpoint', content: 'the powerpoint data' }
+  // ? This will eventually be a list of Objects, with content iside each of the
+  // ?  ex:  { name: 'powerpoint', content: 'the powerpoint data', file: '.pptx : .png : .txt : .pdf ? ext.' }
   const [sceneContent, setSceneContent] = useRecoilState(contentState); // useState(['Camera', 'Powerpoint', 'Text']);
 
   const dragStart = (e: any, position: any) => {
