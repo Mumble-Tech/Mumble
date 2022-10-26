@@ -1,18 +1,17 @@
-
 .link {
-    border: 1px solid #F5EDDA;
-    border-radius: 9px;
-    margin-left: 16px;
+  border: 1px solid #f5edda;
+  border-radius: 9px;
+  margin-left: 16px;
 }
 
 .img {
-    align-items: center;
+  align-items: center;
 }
 
 @media (min-width: 380px) {
-    .footer {
-        position: absolute;
-        margin-top: 30em;
-        margin-left: 0;
-    }
+  .footer {
+    position: absolute;
+    margin-top: 30em;
+    margin-left: 0;
   }
+}

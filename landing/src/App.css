@@ -1,12 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Kodchasan:ital@0;1&display=swap');
 
-
 body {
-  background-color: #E9CBA7 !important;
+  background-color: #e9cba7 !important;
 }
 
 html {
-  background-color: #E9CBA7 !important;
+  background-color: #e9cba7 !important;
 }
 
 .over {
@@ -20,7 +19,7 @@ html {
     height: auto;
   }
   .container-2 {
-    margin-top: 3rem; 
+    margin-top: 3rem;
   }
 }
 

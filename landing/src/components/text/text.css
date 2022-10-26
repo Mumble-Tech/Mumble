@@ -3,38 +3,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
 
 .heading {
-    color: #363636;
-    font-size: min(4rem, 6rem);
-    padding: max(6rem, 2rem);
-    font-weight: bolder;
-    font-family: 'Jua', sans-serif;
+  color: #363636;
+  font-size: min(4rem, 6rem);
+  padding: max(6rem, 2rem);
+  font-weight: bolder;
+  font-family: 'Jua', sans-serif;
 }
 
 .t-lg {
-  font-size: 30px;  
+  font-size: 30px;
 }
 .t-sm {
-    font-size: 22px;  
+  font-size: 22px;
 }
 
 .subheading {
-    color: #F5EDDA;
-    font-size: 22px;
-    font-family: 'Kite One', sans-serif;
-    text-decoration: underline;
-    padding: 2px;
+  color: #f5edda;
+  font-size: 22px;
+  font-family: 'Kite One', sans-serif;
+  text-decoration: underline;
+  padding: 2px;
 }
 
 .description {
-    font-family: 'Kalam', cursive;
-    font-size: 18px;    
-    color: white;
-    padding: 2px;
+  font-family: 'Kalam', cursive;
+  font-size: 18px;
+  color: white;
+  padding: 2px;
 }
 
 @media (min-width: 380px) {
-    .heading {
-        font-size: 5rem;
-        padding: 4px;
-    }
- }
+  .heading {
+    font-size: 5rem;
+    padding: 4px;
+  }
+}
