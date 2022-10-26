@@ -5,10 +5,12 @@
 
 use opencv::{highgui, prelude::*, videoio, Result};
 mod window;
+mod usage;
 
 fn main() {
      // use_camera();
     // window::create_window("Preview Window");
+    // usage::cpu_usage(true);
     tauri::Builder::default()
         .invoke_handler(tauri::generate_handler![record])
         .run(tauri::generate_context!())
