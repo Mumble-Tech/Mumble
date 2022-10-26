@@ -2,8 +2,15 @@
     background-color: aqua;
     color: black;
     resize: both;
-    overflow: auto;
 
+    max-width: 50vw;
+    max-height: 50vh;
+    overflow: hidden;
+}
+
+.test {
+    width: auto;
+    height: auto;
     max-width: 50vw;
     max-height: 50vh;
 }

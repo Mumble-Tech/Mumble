@@ -1,3 +1,5 @@
+import { event } from '@tauri-apps/api';
+import { useState } from 'react';
 import './child.scss';
 
 export enum SceneChild {
@@ -25,7 +27,7 @@ const noSize = (size: any, type: SceneChild): any => {
       case SceneChild.TEXT:
         return ['auto', 'auto'];
       case SceneChild.CAMERA:
-        return ['50px', '50px'];
+        return ['50px', '50px'];  
       default:
         return ['50px', '50px'];
     }
@@ -33,10 +35,10 @@ const noSize = (size: any, type: SceneChild): any => {
 };
 
 const checkColor = (type: SceneChild): string => {
-  switch (type) {
+  switch(type) {
     case SceneChild.POWERPOINT:
       return '#ab6441';
-    case SceneChild.CAMERA:
+    case SceneChild.CAMERA: 
       return '#4c7555';
     case SceneChild.TEXT:
       return 'transparent';
@@ -47,19 +49,20 @@ const checkColor = (type: SceneChild): string => {
   }
 };
 
+
 export const CreateSceneChild = (props: SceneChildProps) => {
+  const [file, setFile]: any = useState();
   let content = noSize(props.size, props.type);
+
+  const previewFile = (e: any) => {
+    console.log(e.target.files);
+    setFile(URL.createObjectURL(e.target.files[0]));
+  }  
   return (
-    <div
-      className="child"
-      style={{
-        width: `${content[0]}`,
-        height: `${content[1]}`,
-        backgroundColor: `${checkColor(props.type)}`
-      }}
-    >
+    <div className="child" style={{ width: `${content[0]}`, height: `${content[1]}`, backgroundColor: `${checkColor(props.type)}` }}>
       {props.name}
-      <input type={'image'} style={{ width: `${content[0]}`, height: `${content[1]}` }} />
+      <img src={file} className='test' />
+      <input type={"file"} onChange={(e: any) => { previewFile(e) }} placeholder='File Here' style={{ width: `${content[0]}`, height: `${content[1]}`}} />
     </div>
   );
 };
