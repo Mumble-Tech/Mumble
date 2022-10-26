@@ -3,7 +3,9 @@ import './scenecontent.scss';
 import { useRef } from 'react';
 import { SceneList } from './SceneList/SceneList';
 import { useRecoilState } from 'recoil';
-import { contentState } from '../SceneContent/recoil_state';
+import { contentState, filePreviewState } from '../SceneContent/recoil_state';
+
+import file from '../../../../assets/File.svg';
 
 interface SceneContentProps {
   /** Eventually will be shared using something like redux */
@@ -15,12 +17,12 @@ interface SceneContentProps {
 
 export const SceneContent = (props: SceneContentProps) => {
   // ! Scene content is going to udpated gloabally, so that the main scene can render the content it wants to.
-
   const dragItem: any = useRef();
   const dragOverItem: any = useRef();
   // ? This will eventually be a list of Objects, with content iside each of the
   // ?  ex:  { name: 'powerpoint', content: 'the powerpoint data', file: '.pptx : .png : .txt : .pdf ? ext.' }
   const [sceneContent, setSceneContent] = useRecoilState(contentState); // useState(['Camera', 'Powerpoint', 'Text']);
+  const [file, setFile] = useRecoilState(filePreviewState);
 
   const dragStart = (e: any, position: any) => {
     dragItem.current = position;
@@ -44,8 +46,13 @@ export const SceneContent = (props: SceneContentProps) => {
     setSceneContent(copyListItems);
   };
 
+  const setPreview = (e: any) => {
+    console.log(e.target.files);
+    setFile(URL.createObjectURL(e.target.files[0]));
+  }
+
   return (
-    <SceneList rootName="SceneName">
+    <SceneList rootName="Testing Default">
       {sceneContent &&
         sceneContent.map((item, index) => {
           return (
@@ -55,8 +62,10 @@ export const SceneContent = (props: SceneContentProps) => {
               onDragEnter={(e) => dragEnter(e, index)}
               onDragEnd={setContent}
               draggable={true}
+              className='scene-item'
             >
               {item}
+              <input type="file" className='scene-item--btn' onChange={(e: any) => {setPreview(e)}} />
             </li>
           );
         })}

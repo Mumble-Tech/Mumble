@@ -1,5 +1,7 @@
-import { event } from '@tauri-apps/api';
+
 import { useState } from 'react';
+import { useRecoilValue } from 'recoil';
+import { filePreviewState } from '../recoil_state';
 import './child.scss';
 
 export enum SceneChild {
@@ -51,18 +53,14 @@ const checkColor = (type: SceneChild): string => {
 
 
 export const CreateSceneChild = (props: SceneChildProps) => {
-  const [file, setFile]: any = useState();
+  const file: any = useRecoilValue(filePreviewState);
   let content = noSize(props.size, props.type);
 
-  const previewFile = (e: any) => {
-    console.log(e.target.files);
-    setFile(URL.createObjectURL(e.target.files[0]));
-  }  
   return (
     <div className="child" style={{ width: `${content[0]}`, height: `${content[1]}`, backgroundColor: `${checkColor(props.type)}` }}>
       {props.name}
       <img src={file} className='test' />
-      <input type={"file"} onChange={(e: any) => { previewFile(e) }} placeholder='File Here' style={{ width: `${content[0]}`, height: `${content[1]}`}} />
+      {/* <input type={"file"} onChange={(e: any) => { previewFile(e) }} placeholder='File Here' style={{ width: `${content[0]}`, height: `${content[1]}`}} /> */}
     </div>
   );
 };

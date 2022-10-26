@@ -15,6 +15,11 @@ const contentFilterState = atom({
   default: 'Show All'
 });
 
+export const filePreviewState = atom({
+  key: 'filePreviewState',
+  default: ''
+});
+
 export const filteredContentState = selector({
   key: 'filteredContentState',
   get: ({ get }) => {

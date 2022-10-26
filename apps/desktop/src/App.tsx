@@ -28,11 +28,11 @@ function App() {
   return (
     <>
       <Footer />
-      <div>{contentDrawer ? <ContentDrawer /> : <></>}</div>
       <div>
         <Scene />
       </div>
       <Titlebar />
+      <div>{contentDrawer ? <ContentDrawer className='test' /> : <></>}</div>
     </>
   );
 }

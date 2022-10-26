@@ -1,0 +1,31 @@
+.scene-item {
+    display: flex;
+    justify-content: start;
+
+    &--btn {
+        @extend .scene-item;
+        width: .99rem;
+        margin-left: 1rem;
+
+        &::file-selector-button {
+            background-color: #0b2f4d;
+            color: transparent;
+            border: none;
+            background-image: url('../../../../assets/File.svg');
+        }
+
+        &::file-selector-button:hover {
+            cursor: pointer;
+        }
+
+        color: transparent;
+    }
+
+    &--img {
+        @extend .scene-item;
+        width: 2em;
+        height: 2em;
+    }
+
+    //
+}
