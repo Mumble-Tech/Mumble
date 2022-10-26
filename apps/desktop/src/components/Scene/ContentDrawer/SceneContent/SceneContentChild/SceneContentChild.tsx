@@ -25,7 +25,7 @@ const noSize = (size: any, type: SceneChild): any => {
       case SceneChild.TEXT:
         return ['auto', 'auto'];
       case SceneChild.CAMERA:
-        return ['50px', '50px'];  
+        return ['50px', '50px'];
       default:
         return ['50px', '50px'];
     }
@@ -33,10 +33,10 @@ const noSize = (size: any, type: SceneChild): any => {
 };
 
 const checkColor = (type: SceneChild): string => {
-  switch(type) {
+  switch (type) {
     case SceneChild.POWERPOINT:
       return '#ab6441';
-    case SceneChild.CAMERA: 
+    case SceneChild.CAMERA:
       return '#4c7555';
     case SceneChild.TEXT:
       return 'transparent';
@@ -50,9 +50,16 @@ const checkColor = (type: SceneChild): string => {
 export const CreateSceneChild = (props: SceneChildProps) => {
   let content = noSize(props.size, props.type);
   return (
-    <div className="child" style={{ width: `${content[0]}`, height: `${content[1]}`, backgroundColor: `${checkColor(props.type)}` }}>
+    <div
+      className="child"
+      style={{
+        width: `${content[0]}`,
+        height: `${content[1]}`,
+        backgroundColor: `${checkColor(props.type)}`
+      }}
+    >
       {props.name}
-      <input type={"image"} style={{ width: `${content[0]}`, height: `${content[1]}`}} />
+      <input type={'image'} style={{ width: `${content[0]}`, height: `${content[1]}` }} />
     </div>
   );
 };

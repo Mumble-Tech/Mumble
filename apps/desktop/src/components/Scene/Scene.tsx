@@ -25,7 +25,7 @@ export const Scene = (props: SceneProps) => {
           case 'Camera':
             return <CreateSceneChild name="Camera" type={SceneChild.CAMERA} />;
           case 'Powerpoint':
-            return <CreateSceneChild name='Powerpoint' type={SceneChild.POWERPOINT} />;
+            return <CreateSceneChild name="Powerpoint" type={SceneChild.POWERPOINT} />;
           default:
             return <div key={key}></div>;
         }
