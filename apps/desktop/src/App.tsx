@@ -24,8 +24,7 @@ function App() {
   let contentDrawer = useRecoilValue(contentDrawerActive);
 
   console.log(contentDrawer);
-  
-  
+
   return (
     <>
       <Footer />

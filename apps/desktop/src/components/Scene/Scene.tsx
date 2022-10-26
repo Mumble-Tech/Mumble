@@ -1,14 +1,11 @@
 import './scene.scss';
 
-import useKeyPress from '../../hooks/usekeypress';
-import { ContentDrawer } from './ContentDrawer/ContentDrawer';
 import { useRecoilState, useRecoilValue } from 'recoil';
+import { filteredContentState } from './ContentDrawer/SceneContent/recoil_state';
 import {
-  contentDrawerActive,
-  filteredContentState
-} from './ContentDrawer/SceneContent/recoil_state';
-import { useHotkeys } from 'react-hotkeys-hook';
-import { Camera } from './ContentDrawer/SceneContent/SceneList/SceneListChild/Camera';
+  CreateSceneChild,
+  SceneChild
+} from './ContentDrawer/SceneContent/SceneContentChild/SceneContentChild';
 
 interface SceneProps {
   sceneName?: string;
@@ -26,7 +23,7 @@ export const Scene = (props: SceneProps) => {
       {content.map((index, key) => {
         switch (index) {
           case 'Camera':
-            return <Camera key={key} />;
+            return <CreateSceneChild name="Camera" type={SceneChild.CAMERA} />;
           default:
             return <div key={key}></div>;
         }
