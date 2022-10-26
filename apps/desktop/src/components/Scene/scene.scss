@@ -12,4 +12,8 @@
     background:#0F3D62;
     border: 1px solid #0F3D62;
     border-radius: 5px;
+
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
 }

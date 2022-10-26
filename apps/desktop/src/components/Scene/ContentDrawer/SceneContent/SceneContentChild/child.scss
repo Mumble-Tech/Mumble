@@ -1,4 +1,9 @@
 .child {
     background-color: aqua;
     color: black;
+    resize: both;
+    overflow: auto;
+
+    max-width: 50vw;
+    max-height: 50vh;
 }
