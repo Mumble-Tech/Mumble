@@ -6,9 +6,8 @@
 use opencv::{highgui, prelude::*, videoio, Result};
 mod window;
 mod usage;
-
 fn main() {
-     // use_camera();
+    record();
     // window::create_window("Preview Window");
     // usage::cpu_usage(true);
     tauri::Builder::default()
@@ -38,8 +37,8 @@ fn use_camera() -> Result<(), opencv::Error> {
        let mut frame = Mat::default();
       cam.read(&mut frame)?;
        if frame.size()?.width > 0 {
-            // show on the gui
-           highgui::imshow("Preview Window", &mut frame)?;
+            // show on the screen in the tauri apps window
+           highgui::imshow("Mumble", &mut frame)?;
        }
        let key = highgui::wait_key(10)?;
         if key > 0 && key != 255 {
