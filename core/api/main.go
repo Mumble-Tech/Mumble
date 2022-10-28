@@ -2,6 +2,7 @@ package main
 
 import (
 	// s"api/auth"
+	"api/database"
 	"api/util"
 	"context"
 	"encoding/json"
@@ -113,6 +114,10 @@ func tempServe() {
 }
 
 func main() {
+	// database things
+	database.Connect("root:root@tcp(localhost:3306)/jwt_demo?parseTime=true")
+	database.Migrate()
+
 	log.Println("Starting the server")
 	tempServe()
 }
