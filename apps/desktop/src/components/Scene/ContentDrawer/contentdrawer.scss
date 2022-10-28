@@ -1,3 +1,4 @@
+@import '../../../sass/__variables.scss';
 
 .content-drawer {
     background-color: #0b2f4d;
@@ -5,7 +6,7 @@
 
     &--content {
         @extend .content-drawer;
-        font-family: 'Courier New', Courier, monospace;
+        font-family: $Lato-Family;
         display: grid;
         grid-template-columns: auto auto;
         grid-gap: 10px;
@@ -25,7 +26,3 @@
         background-color: #124B79 !important;
     }
 }
-
-// .scene-structure {
-
-// }

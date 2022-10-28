@@ -7,7 +7,7 @@ use opencv::{highgui, prelude::*, videoio, Result};
 mod window;
 mod usage;
 fn main() {
-    record();
+    // record();
     // window::create_window("Preview Window");
     // usage::cpu_usage(true);
     tauri::Builder::default()

@@ -5,11 +5,11 @@ import circle from '../../assets/circle.svg';
 
 export const Titlebar = () => {
   return (
-    <div data-tauri-drag-region className="titlebar">
+    <div data-tauri-drag-region className="titlebar lato">
       {/* Logo in the app */}
       <div className="logo">
         <img src={logo} className="img" />
-        <h1>Mumble</h1>
+        <h2>Mumble</h2>
       </div>
 
       {/* Editor / Live Links */}
@@ -19,7 +19,7 @@ export const Titlebar = () => {
       </div>
 
       {/* Live status */}
-      <div className="">
+      <div className="container">
         <span className="text" style={{ left: '61em' }}>
           Offline
         </span>

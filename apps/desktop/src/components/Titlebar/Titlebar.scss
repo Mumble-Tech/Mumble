@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import '../../sass/_variables';
+
+.lato {
+  font-family: $Lato-Family;
+  color: white;
+}
 
 .titlebar {
     height: 70px;
@@ -10,6 +15,11 @@
     top: 0;
     left: 0;
     right: 0;
+
+    h2 {
+      font-family: $Jua-Family;
+      font-size: 2rem;
+    }
   }
 
   .logo {
@@ -27,7 +37,6 @@
     margin-left: 250px;
 
     /* font things */
-    font-family: 'Lato', sans-serif;
     font-weight: 400;
   }
 
@@ -39,10 +48,14 @@
   }
 
   .text {
-    font-family: 'Lato', sans-serif;
     font-size: 1.25rem;
     position: fixed;
     top: 1em;
+    font-family: $Jua-Family;
+  }
+
+  .container {
+    // TODO: Move the container correctly.
   }
 
   .flex {
@@ -50,7 +63,6 @@
   }
 
   .scene-link {
-    font-family: 'Lato', sans-serif;
     font-weight: 300;
 
     cursor: pointer;

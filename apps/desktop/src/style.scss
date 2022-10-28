@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+@import './sass/_variables';
 
 :root {
-  font-family: 'Jua', sans-serif;
+  font-family: $Jua-Family;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
 
   color: #0f0f0f;
-  background-color: #f6f6f6;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -18,7 +18,6 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    color: #f6f6f6;
     background-color: #092c47;
   }
 
