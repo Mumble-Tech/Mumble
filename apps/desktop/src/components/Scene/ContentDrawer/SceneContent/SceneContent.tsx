@@ -49,7 +49,7 @@ export const SceneContent = (props: SceneContentProps) => {
   const setPreview = (e: any) => {
     console.log(e.target.files);
     setFile(URL.createObjectURL(e.target.files[0]));
-  }
+  };
 
   return (
     <SceneList rootName="Testing Default">
@@ -62,10 +62,16 @@ export const SceneContent = (props: SceneContentProps) => {
               onDragEnter={(e) => dragEnter(e, index)}
               onDragEnd={setContent}
               draggable={true}
-              className='scene-item'
+              className="scene-item"
             >
               {item}
-              <input type="file" className='scene-item--btn' onChange={(e: any) => {setPreview(e)}} />
+              <input
+                type="file"
+                className="scene-item--btn"
+                onChange={(e: any) => {
+                  setPreview(e);
+                }}
+              />
             </li>
           );
         })}

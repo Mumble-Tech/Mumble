@@ -32,7 +32,7 @@ function App() {
         <Scene />
       </div>
       <Titlebar />
-      <div>{contentDrawer ? <ContentDrawer className='test' /> : <></>}</div>
+      <div>{contentDrawer ? <ContentDrawer className="test" /> : <></>}</div>
     </>
   );
 }

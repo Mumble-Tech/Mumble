@@ -2,9 +2,7 @@ import './contentdrawer.scss';
 import { ContentPreview } from './LiveContentPreview/ContentPreview';
 import { SceneContent } from './SceneContent/SceneContent';
 
-
-
-export const ContentDrawer = (props: { className: string}) => {
+export const ContentDrawer = (props: { className: string }) => {
   return (
     <div className={`content-drawer ${props.className}`}>
       Welcome to the Content Drawer
