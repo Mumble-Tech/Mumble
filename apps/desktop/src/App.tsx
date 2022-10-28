@@ -9,7 +9,7 @@ import { Footer } from './components/Footer/Footer';
 
 // State things
 import { useRecoilState, useRecoilValue } from 'recoil';
-import { contentDrawerActive } from './components/Scene/ContentDrawer/SceneContent/recoil_state';
+import { contentDrawerActive } from './components/Scene/State/recoil_state';
 import { ContentDrawer } from './components/Scene/ContentDrawer/ContentDrawer';
 import { useHotkeys } from 'react-hotkeys-hook';
 
@@ -32,7 +32,7 @@ function App() {
         <Scene />
       </div>
       <Titlebar />
-      <div>{contentDrawer ? <ContentDrawer className="test" /> : <></>}</div>
+      <div>{contentDrawer ? <ContentDrawer className="content-drawer-pos" /> : <></>}</div>
     </>
   );
 }

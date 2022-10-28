@@ -4,8 +4,16 @@ import cpu from '../../assets/Cpu.svg';
 import stack from '../../assets/layer.svg';
 import info from '../../assets/Info.svg';
 import rec from '../../assets/Record button.svg';
+import { useRecoilState } from 'recoil';
+import { isLoggedIn } from '../Scene/State/login_state';
 
 export const Footer = () => {
+  const [login, setLogin] = useRecoilState(isLoggedIn);
+
+  const set = () => {
+    setLogin(!login);
+  };
+
   return (
     <div className="footer">
       {/* Right Side */}
@@ -22,9 +30,17 @@ export const Footer = () => {
       <div className="image-cont">
         <img src={info} className="info" />
       </div>
-      {/* Go Live Button */}
+      {/* Go Live Button / Sign in Button*/}
       <div className="image-cont">
-        <button className="live-btn-temp">Go Live</button>
+        {login ? (
+          <button className="live-btn-temp" onClick={set}>
+            Go Live
+          </button>
+        ) : (
+          <button className="live-btn-temp" onClick={set}>
+            Sign in
+          </button>
+        )}
       </div>
       {/* Record Button */}
       <div>

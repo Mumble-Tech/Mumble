@@ -1,5 +1,5 @@
 import { useRecoilValue } from 'recoil';
-import { filePreviewState } from '../recoil_state';
+import { filePreviewState } from '../../../State/recoil_state';
 import './child.scss';
 
 export enum SceneChild {

@@ -1,7 +1,7 @@
 import './scene.scss';
 
 import { useRecoilState, useRecoilValue } from 'recoil';
-import { filteredContentState } from './ContentDrawer/SceneContent/recoil_state';
+import { filteredContentState } from './State/recoil_state';
 import {
   CreateSceneChild,
   SceneChild

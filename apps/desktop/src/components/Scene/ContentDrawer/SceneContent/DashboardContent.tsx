@@ -3,9 +3,7 @@ import './dashboardcontent.scss';
 import { useRef } from 'react';
 import { SceneList } from './SceneList/SceneList';
 import { useRecoilState } from 'recoil';
-import { contentState, filePreviewState } from './recoil_state';
-
-import file from '../../../../assets/File.svg';
+import { contentState, filePreviewState } from '../../State/recoil_state';
 
 interface SceneContentProps {
   /** Eventually will be shared using something like redux */

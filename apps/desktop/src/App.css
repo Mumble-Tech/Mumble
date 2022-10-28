@@ -6,7 +6,7 @@
   filter: drop-shadow(0 0 2em #61dafb);
 }
 
-.test {
+.content-drawer-pos {
   position: fixed;
   width: auto;
   bottom: 5em;
