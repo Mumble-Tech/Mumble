@@ -1,7 +1,7 @@
 package main
 
 import (
-	"api/auth"
+	// s"api/auth"
 	"api/util"
 	"context"
 	"encoding/json"
@@ -11,6 +11,9 @@ import (
 	"net"
 	"net/http"
 	"os"
+	"time"
+
+	"github.com/xuri/excelize/v2"
 
 	"github.com/gorilla/mux"
 	log "github.com/sirupsen/logrus"
@@ -24,6 +27,21 @@ type User struct {
 	Username string `json:"username"`
 	Email    string `json:"email"`
 	Password string `json:"password"`
+}
+
+func export_excel() {
+	f := excelize.NewFile()
+
+	f.SetCellValue("Sheet1", "B2", 100)
+	f.SetCellValue("Sheet", "A1", 50)
+
+	now := time.Now()
+
+	f.SetCellValue("Sheet1", "A4", now.Format(time.ANSIC))
+
+	if err := f.SaveAs("simple.xlsx"); err != nil {
+		log.Fatal(err)
+	}
 }
 
 func getRoot(w http.ResponseWriter, r *http.Request) {
@@ -59,8 +77,9 @@ func createUserRoute(w http.ResponseWriter, r *http.Request) {
 }
 
 func tempServe() {
+	export_excel()
 	router := mux.NewRouter()
-	authRouter := router.PathPrefix("/auth").Subrouter()
+	// authRouter := router.PathPrefix("/auth").Subrouter()
 
 	// jwt auth route login / signup handlers
 
@@ -70,7 +89,7 @@ func tempServe() {
 
 	router.HandleFunc("/create/user", createUserRoute)
 
-	authRouter.HandleFunc("/signup", auth.SignupHandler)
+	// authRouter.HandleFunc("/signup", auth.SignupHandler)
 
 	ctx := context.Background()
 	server := &http.Server{
@@ -82,7 +101,7 @@ func tempServe() {
 		},
 	}
 
-	authRouter.HandleFunc("/signin", auth.SigninHandler)
+	// authRouter.HandleFunc("/signin", auth.SigninHandler)
 
 	err := server.ListenAndServe()
 	if errors.Is(err, http.ErrServerClosed) {
