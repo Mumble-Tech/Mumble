@@ -11,15 +11,16 @@
             background-color: #0b2f4d;
             color: transparent;
             border: none;
-            // is there a better way to load this.
+            // ? Is there a more dynamic way to load this
             background-image: url('../../../../assets/File.svg');
+            background-repeat: no-repeat;
+            width: 2em;
+            height: 2em;
         }
 
         &::file-selector-button:hover {
             cursor: pointer;
         }
-
-        color: transparent;
     }
 
     &--img {
@@ -27,6 +28,4 @@
         width: 2em;
         height: 2em;
     }
-
-    //
 }

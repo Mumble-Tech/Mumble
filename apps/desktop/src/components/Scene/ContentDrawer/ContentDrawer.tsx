@@ -1,6 +1,5 @@
 import './contentdrawer.scss';
-import { ContentPreview } from './LiveContentPreview/ContentPreview';
-import { SceneContent } from './SceneContent/SceneContent';
+import { SceneContent } from './SceneContent/DashboardContent';
 
 export const ContentDrawer = (props: { className: string }) => {
   return (
@@ -11,10 +10,6 @@ export const ContentDrawer = (props: { className: string }) => {
           <div className="scene-structure">
             <SceneContent rootSceneName="Scene Name" />
           </div>
-          {/* ! Cotent Preview needs to be onClick */}
-          {/* <div className="preview--content"> 
-            <ContentPreview />
-          </div> */}
         </div>
         <div className="preview--audio left">
           <span>Preview of the audio setting</span>

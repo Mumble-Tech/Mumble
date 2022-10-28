@@ -8,6 +8,10 @@ interface SceneListProps {
   className?: string;
 }
 
+/**
+ * This is the Content List
+ * @param props - This contains the root node
+ * @default rootNode - The root of the List or `Scene Name`  */
 export const SceneList = (props: SceneListProps) => {
   return (
     <ul className={`scene-list ${props.className}`}>

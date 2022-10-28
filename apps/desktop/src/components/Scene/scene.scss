@@ -7,7 +7,7 @@
 
     // position code
     position: fixed;
-     top: 5em;
+    top: 5em;
 
     background:#0F3D62;
     border: 1px solid #0F3D62;
@@ -16,4 +16,6 @@
     display: grid;
     grid-template-columns: auto auto auto;
     grid-template-rows: auto auto auto;
+
+    overflow: hidden;
 }

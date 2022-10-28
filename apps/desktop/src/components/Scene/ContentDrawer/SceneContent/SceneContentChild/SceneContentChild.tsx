@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { useRecoilValue } from 'recoil';
 import { filePreviewState } from '../recoil_state';
 import './child.scss';
@@ -50,6 +49,9 @@ const checkColor = (type: SceneChild): string => {
   }
 };
 
+/**
+ *  This Creates The Children for the current Scene.
+ */
 export const CreateSceneChild = (props: SceneChildProps) => {
   const file: any = useRecoilValue(filePreviewState);
   let content = noSize(props.size, props.type);
@@ -64,8 +66,8 @@ export const CreateSceneChild = (props: SceneChildProps) => {
       }}
     >
       {props.name}
-      <img src={file} className="test" />
-      {/* <input type={"file"} onChange={(e: any) => { previewFile(e) }} placeholder='File Here' style={{ width: `${content[0]}`, height: `${content[1]}`}} /> */}
+      {/* Image Preview from Content Drawer */}
+      <img src={file} className=".child-preview" />
     </div>
   );
 };

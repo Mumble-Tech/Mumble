@@ -1,20 +1,25 @@
+@import '../../../../../sass/_variables';
+
 .scene-list {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: $Lato-Family;
     list-style: decimal-leading-zero;
     font-size: 1rem;
 
+    // Root Node
     &--root {
-        font-family: 'Times New Roman', Times, serif;
-        text-decoration: underline;
+        font-family: $Lato-Family;
         text-align: left;
         display: flex;
         flex-direction: row;
         font-size: 2rem;
-        padding: 1rem;
+        margin-bottom: 1rem;
+
+        color: white;
 
         &--img {
             width: 20px;
-            padding: 6px;
+            padding: .25rem;
         }
     }
+
 }

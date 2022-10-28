@@ -1,9 +1,9 @@
-import './scenecontent.scss';
+import './dashboardcontent.scss';
 
 import { useRef } from 'react';
 import { SceneList } from './SceneList/SceneList';
 import { useRecoilState } from 'recoil';
-import { contentState, filePreviewState } from '../SceneContent/recoil_state';
+import { contentState, filePreviewState } from './recoil_state';
 
 import file from '../../../../assets/File.svg';
 
@@ -15,6 +15,10 @@ interface SceneContentProps {
   readonly?: boolean;
 }
 
+/**
+ * The Content of the Current Default Scene.
+ *
+ */
 export const SceneContent = (props: SceneContentProps) => {
   // ! Scene content is going to udpated gloabally, so that the main scene can render the content it wants to.
   const dragItem: any = useRef();
@@ -33,6 +37,10 @@ export const SceneContent = (props: SceneContentProps) => {
     dragOverItem.current = position;
   };
 
+  /**
+   * This resets the list order based on the users drag
+   * @param e Event of the Drag
+   */
   const setContent = (e: any): void => {
     const copyListItems = [...sceneContent];
     const dragItemContent = copyListItems[dragItem.current];
@@ -46,6 +54,9 @@ export const SceneContent = (props: SceneContentProps) => {
     setSceneContent(copyListItems);
   };
 
+  /**
+   * This sets the preview of the image that is added to the current scene.
+   */
   const setPreview = (e: any) => {
     console.log(e.target.files);
     setFile(URL.createObjectURL(e.target.files[0]));
