@@ -59,6 +59,5 @@ require (
 )
 
 require (
-	github.com/gorilla/mux v1.8.0
 	golang.org/x/sys v0.1.0 // indirect
 )
