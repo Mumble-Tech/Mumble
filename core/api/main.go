@@ -115,7 +115,7 @@ func tempServe() {
 
 func main() {
 	// database things
-	database.Connect("root:root@tcp(localhost:3306)/jwt_demo?parseTime=true")
+	database.Connect("postgresql://Deondre:password@localhost:5432/MumbleDB")
 	database.Migrate()
 
 	log.Println("Starting the server")
