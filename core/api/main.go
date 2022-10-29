@@ -3,6 +3,8 @@ package main
 import (
 	// s"api/auth"
 	"api/database"
+	"api/database/controllers"
+	"api/middlewares"
 	"api/util"
 	"context"
 	"encoding/json"
@@ -12,9 +14,8 @@ import (
 	"net"
 	"net/http"
 	"os"
-	"time"
 
-	"github.com/xuri/excelize/v2"
+	"github.com/gin-gonic/gin"
 
 	"github.com/gorilla/mux"
 	log "github.com/sirupsen/logrus"
@@ -28,21 +29,6 @@ type User struct {
 	Username string `json:"username"`
 	Email    string `json:"email"`
 	Password string `json:"password"`
-}
-
-func export_excel() {
-	f := excelize.NewFile()
-
-	f.SetCellValue("Sheet1", "B2", 100)
-	f.SetCellValue("Sheet", "A1", 50)
-
-	now := time.Now()
-
-	f.SetCellValue("Sheet1", "A4", now.Format(time.ANSIC))
-
-	if err := f.SaveAs("simple.xlsx"); err != nil {
-		log.Fatal(err)
-	}
 }
 
 func getRoot(w http.ResponseWriter, r *http.Request) {
@@ -77,8 +63,25 @@ func createUserRoute(w http.ResponseWriter, r *http.Request) {
 	log.Printf("user: %s", u.Username)
 }
 
+func initRouter() *gin.Engine {
+	router := gin.Default()
+	api := router.Group("/api")
+	{
+		api.POST("/token", controllers.GenerateToken)
+		api.POST("user/register", controllers.RegisterUser)
+		secured := api.Group("/secured").Use(middlewares.Auth())
+		{
+			secured.GET("/ping", controllers.Ping)
+		}
+	}
+
+	return router
+}
+
 func tempServe() {
-	export_excel()
+	auth := initRouter()
+	auth.Run(":8080")
+
 	router := mux.NewRouter()
 	// authRouter := router.PathPrefix("/auth").Subrouter()
 
