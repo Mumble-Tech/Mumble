@@ -34,9 +34,7 @@ export const Footer = () => {
       {/* Go Live Button / Sign in Button*/}
       <div className="image-cont">
         {login ? (
-          <button className="live-btn-temp" onClick={set}>
-            Go Live
-          </button>
+          <button className="live-btn-temp">Go Live</button>
         ) : (
           <button className="live-btn-temp" onClick={set}>
             Sign in

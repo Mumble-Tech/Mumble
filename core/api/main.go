@@ -1,11 +1,9 @@
 package main
 
 import (
-	// s"api/auth"
 	"api/database"
 	"api/database/controllers"
 	"api/middlewares"
-
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 
@@ -40,7 +38,10 @@ func initRouter() *gin.Engine {
 func tempServe() {
 	auth := initRouter()
 	routerUse(auth)
-	auth.Run(":8080")
+	err := auth.Run(":8080")
+	if err != nil {
+		return
+	}
 }
 
 func main() {

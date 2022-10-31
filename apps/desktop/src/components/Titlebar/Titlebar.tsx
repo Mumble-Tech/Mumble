@@ -14,8 +14,8 @@ export const Titlebar = () => {
 
       {/* Editor / Live Links */}
       <div className="links">
-        <h1 className="scene-link">Editor</h1>
-        <h1 className="scene-link--active">Live</h1>
+        <h1 className="scene-link--active">Editor</h1>
+        <h1 className="scene-link">Live</h1>
       </div>
 
       {/* Live status */}
@@ -23,7 +23,7 @@ export const Titlebar = () => {
         <span className="text" style={{ left: '61em' }}>
           Offline
         </span>
-        <img src={circle} style={{ padding: '1.25em', marginTop: '2px' }} className="icon" />
+        <img src={circle} style={{ padding: '1rem', marginTop: '2px' }} className="icon" />
       </div>
 
       {/* Live Viewer Count */}

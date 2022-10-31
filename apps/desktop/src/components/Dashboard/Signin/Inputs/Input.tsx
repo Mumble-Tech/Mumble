@@ -1,12 +1,9 @@
-
 import './inputs.scss';
 
 interface input {
-    onChange?: any;
+  onChange?: any;
 }
 
 export const Input = (props: input) => {
-    return (
-        <input type='text' className='text-input' onChange={props.onChange} />
-    );
+  return <input type="text" className="text-input" onChange={props.onChange} />;
 };

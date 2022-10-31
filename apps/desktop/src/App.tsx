@@ -30,8 +30,7 @@ function App() {
     <>
       <Footer />
       <div>
-        {/* <Scene /> */}
-        <SiginForm />
+        <Scene />
       </div>
       <Titlebar />
       <div>{contentDrawer ? <ContentDrawer className="content-drawer-pos" /> : <></>}</div>

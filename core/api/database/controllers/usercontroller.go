@@ -3,6 +3,7 @@ package controllers
 import (
 	"api/database"
 	"api/database/models"
+	"api/middlewares"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -18,6 +19,7 @@ func RegisterUser(context *gin.Context) {
 	if err := user.HashPassword(user.Password); err != nil {
 		// Return gin error when hashing password
 		context.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
+		middlewares.OutputError(err.Error())
 		context.Abort()
 		return
 	}

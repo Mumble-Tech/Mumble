@@ -1,10 +1,7 @@
-
 interface props {
-    text: string;
+  text: string;
 }
 
 export const Label = (props: props) => {
-    return (
-        <label>{props.text}</label>
-    )
-}
+  return <label>{props.text}</label>;
+};

@@ -25,6 +25,7 @@
   .logo {
     display: flex;
     float: left;
+    width: 1.25em; 
     position: fixed;
     left: 0;
   }
@@ -70,7 +71,7 @@
     &--active {
       @extend .scene-link;
 
-      margin-left: 1em;
+      margin-right: 1em;
       text-decoration: underline;
     }
   }
