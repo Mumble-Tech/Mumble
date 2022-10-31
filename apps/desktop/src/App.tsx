@@ -12,6 +12,7 @@ import { useRecoilState, useRecoilValue } from 'recoil';
 import { contentDrawerActive } from './components/Scene/State/recoil_state';
 import { ContentDrawer } from './components/Scene/ContentDrawer/ContentDrawer';
 import { useHotkeys } from 'react-hotkeys-hook';
+import { SiginForm } from './components/Dashboard/Signin/Form/SigninForm';
 
 function App() {
   // setGreetMsg(await invoke("record"));
@@ -29,7 +30,8 @@ function App() {
     <>
       <Footer />
       <div>
-        <Scene />
+        {/* <Scene /> */}
+        <SiginForm />
       </div>
       <Titlebar />
       <div>{contentDrawer ? <ContentDrawer className="content-drawer-pos" /> : <></>}</div>

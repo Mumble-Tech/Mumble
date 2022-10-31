@@ -1,4 +1,8 @@
 
+import './inputs.scss';
+
 export const Input = () => {
-    return ();
+    return (
+        <input type='text' className='text-input' />
+    );
 };

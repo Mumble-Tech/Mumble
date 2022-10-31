@@ -6,6 +6,7 @@ import info from '../../assets/Info.svg';
 import rec from '../../assets/Record button.svg';
 import { useRecoilState } from 'recoil';
 import { isLoggedIn } from '../Scene/State/login_state';
+import { SiginForm } from '../Dashboard/Signin/Form/SigninForm';
 
 export const Footer = () => {
   const [login, setLogin] = useRecoilState(isLoggedIn);
