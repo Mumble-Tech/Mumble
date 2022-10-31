@@ -6,10 +6,21 @@ import (
 	"api/database/controllers"
 	"api/middlewares"
 
+	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 
 	log "github.com/sirupsen/logrus"
 )
+
+func routerUse(router *gin.Engine) {
+	router.Use(cors.New(cors.Config{
+		AllowOrigins:     []string{"*"},
+		AllowMethods:     []string{"POST", "GET"},
+		AllowHeaders:     []string{"Origin"},
+		ExposeHeaders:    []string{"Content-Length"},
+		AllowCredentials: true,
+	}))
+}
 
 func initRouter() *gin.Engine {
 	router := gin.Default()
@@ -28,6 +39,7 @@ func initRouter() *gin.Engine {
 
 func tempServe() {
 	auth := initRouter()
+	routerUse(auth)
 	auth.Run(":8080")
 }
 
