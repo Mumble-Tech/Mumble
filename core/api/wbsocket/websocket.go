@@ -36,7 +36,7 @@ func reader(conn *websocket.Conn) {
 	}
 }
 
-func wsEndpoint(w http.ResponseWriter, r *http.Request) {
+func WsEndpoint(w http.ResponseWriter, r *http.Request) {
 	// upgrade this connection to a WebSocket
 	// connection
 	ws, err := upgrader.Upgrade(w, r, nil)
@@ -55,12 +55,12 @@ func wsEndpoint(w http.ResponseWriter, r *http.Request) {
 }
 
 func setupRoutes() {
-	http.HandleFunc("/ws", wsEndpoint)
+	http.HandleFunc("/ws", WsEndpoint)
 }
 
-func socketServer() error {
-	fmt.Println("Hello World")
+func SocketServer() error {
 	setupRoutes()
-	log.Fatal(http.ListenAndServe(":8000", nil))
+	fmt.Println("Testing the wbsocket route")
+	log.Fatal(http.ListenAndServe(":8080", nil))
 	return nil
 }

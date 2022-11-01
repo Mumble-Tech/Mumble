@@ -1,0 +1,5 @@
+package wbsocket
+
+func SendVideo() {
+
+}

@@ -4,6 +4,8 @@ import (
 	"api/database"
 	"api/database/controllers"
 	"api/middlewares"
+	"api/util"
+	"api/wbsocket"
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 
@@ -38,6 +40,8 @@ func initRouter() *gin.Engine {
 func tempServe() {
 	auth := initRouter()
 	routerUse(auth)
+	wbsocket.SocketServer()
+	util.RedisClient()
 	err := auth.Run(":8080")
 	if err != nil {
 		return
