@@ -7,9 +7,6 @@ use opencv::{highgui, prelude::*, videoio, Result};
 mod window;
 mod usage;
 fn main() {
-    // record();
-    // window::create_window("Preview Window");
-    // usage::cpu_usage(true);
     tauri::Builder::default()
         .invoke_handler(tauri::generate_handler![record])
         .run(tauri::generate_context!())
@@ -51,5 +48,5 @@ fn use_camera() -> Result<(), opencv::Error> {
 
 #[tauri::command]
 fn record() {
-  use_camera(); 
+ use_camera(); 
 }
