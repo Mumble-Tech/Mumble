@@ -9,7 +9,7 @@ func RedisClient() {
 	fmt.Println("Testing Golang Redis")
 	client := redis.NewClient(&redis.Options{
 		Addr:     "localhost:6379",
-		Password: "",
+		Password: "eYVX7EwVmmxKPCDmwMtyKVge8oLd2t81",
 		DB:       0,
 	})
 

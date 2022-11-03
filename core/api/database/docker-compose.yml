@@ -13,7 +13,6 @@ services:
     ports:
       - "5432:5432"
 
-
   cache:
     image: redis:6.2-alpine
     restart: always

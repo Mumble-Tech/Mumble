@@ -40,8 +40,11 @@ func initRouter() *gin.Engine {
 func tempServe() {
 	auth := initRouter()
 	routerUse(auth)
-	wbsocket.SocketServer()
 	util.RedisClient()
+	t := wbsocket.SocketServer()
+	if t != nil {
+		return
+	}
 	err := auth.Run(":8080")
 	if err != nil {
 		return
