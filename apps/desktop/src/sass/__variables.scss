@@ -10,3 +10,50 @@ $Lato-Family: 'Lato', sans-serif;
 
 
 // colors
+$default-dark: #000000;
+$default-light: #fff;
+
+// background color
+$primary-bg-color:  #0F3D62;
+$transparent: transparent;
+
+// Dark mode
+$primary-bg-dark: #091927;
+$primary-bg-dark-offset: #0F2940;
+
+// background offsets
+$primary-bg-offset: #0F3D62;
+$primary-bg-offset2: #124B79;
+
+// audio bg
+$audio-bg-color: #3E394D;
+// audio level color
+$audio-level-color: #008000;
+
+// text colors
+$primary-txt-color: #E58F00;
+
+
+// start live stream
+$go-live-btn: #161F27;
+$go-live-btn-hover: #102C38;
+$go-live-txt-hover: #985F01;
+// End live
+$end-live-txt-color: #FFD18B;
+$end-live-btn: #193138;
+$end-live-btn-hover: #2A4A54;
+$end-live-txt-hover: #BA9358;
+
+//  Scene Content Drawer Colors
+$scene-ctn-drawer-search: #091927;
+$scene-ctn-drawer-search-hover: #0F2C3E;
+$scene-ctn-drawer-search-txt-color: #E58F00;
+$scene-ctn-drawer-folder-color: #E58F00;
+
+// .Scene Component Colors
+$scene-root-bg-color: #97D5E0;
+$scene-camera-bg-color: #0BA454;
+$scene-video-bg-color: #E58F00;
+$scene-mic-bg-color: #64E369;
+$scene-txt-bg-color: #94532D;
+$scene-powerpoint-bg-color: #CF6679;
