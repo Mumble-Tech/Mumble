@@ -21,6 +21,10 @@ func Connect(connectionString string) {
 }
 
 func Migrate() {
-	Instance.AutoMigrate(&models.User{})
+	// Migrate the models to the Database: TODO: Figure out how to write relations inside the GORM models
+	err := Instance.AutoMigrate(&models.User{}, &models.JPG{}, &models.PDF{}, &models.Powerpoint{}, &models.TextFile{}, &models.Video{})
+	if err != nil {
+		return
+	}
 	log.Println("Database Migration Completed!")
 }
