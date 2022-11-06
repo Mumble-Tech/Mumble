@@ -24,6 +24,11 @@ func (user *User) HashPassword(password string) error {
 	return nil
 }
 
+// ValidatePhoneNumber
+func (user *User) ValidatePhoneNumber(providedPhoneNumber string) error {
+
+}
+
 // CheckPassword check to make sure the hash worked
 func (user *User) CheckPassword(providedPassword string) error {
 	err := bcrypt.CompareHashAndPassword([]byte(user.Password), []byte(providedPassword))
