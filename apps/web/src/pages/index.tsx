@@ -1,6 +1,6 @@
-import { type NextPage } from "next";
-import Head from "next/head";
-import Link from "next/link";
+import { type NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
 
 const Home: NextPage = () => {
   return (
@@ -61,11 +61,7 @@ type TechnologyCardProps = {
   documentation: string;
 };
 
-const TechnologyCard = ({
-  name,
-  description,
-  documentation,
-}: TechnologyCardProps) => {
+const TechnologyCard = ({ name, description, documentation }: TechnologyCardProps) => {
   return (
     <section className="flex flex-col justify-center rounded border-2 border-gray-500 p-6 shadow-xl duration-500 motion-safe:hover:scale-105">
       <h2 className="text-lg text-gray-700">{name}</h2>
