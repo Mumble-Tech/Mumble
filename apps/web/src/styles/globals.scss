@@ -1,7 +1,13 @@
+@import './_variables';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
   background-color: #80dfff;
+}
+
+.jua {
+  font-family: $jua;
 }

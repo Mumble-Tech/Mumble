@@ -28,7 +28,7 @@ export const StreamContainer = () => {
   return (
     <div className="bg-blue-300 w-[63%] h-[40rem] fixed left-[28em] top-[6rem]">
       {activeStream ? (
-        <video className="w-full h-full" controls>
+        <video className="w-full h-full border-none rounded-lg" controls>
           <source src={video.url} type="video/mp4" />
         </video>
       ) : (
