@@ -4,24 +4,28 @@
 
 .heading {
   color: #363636;
-  font-size: min(4rem, 6rem);
-  padding: max(6rem, 2rem);
-  font-weight: bolder;
+  font-size: min(1rem, 2rem);
+  font-weight: regular;
   font-family: 'Jua', sans-serif;
+  
+  padding: max(6rem, 2rem);
+  transition: 0.5s;
 }
 
 .t-lg {
   font-size: 30px;
 }
+
 .t-sm {
   font-size: 22px;
 }
 
 .subheading {
-  color: #f5edda;
+  color: #695252;
   font-size: 22px;
-  font-family: 'Kite One', sans-serif;
-  text-decoration: underline;
+  font-style: italic;
+  font-weight: 300;
+  font-family: 'Lato', sans-serif;
   padding: 2px;
 }
 

@@ -1,0 +1,27 @@
+.img-font {
+    font-family: 'Jua', sans-serif;
+    font-size: 3rem;
+}
+
+.font {
+    font-family: Lato;
+    font-style: italic;
+    color: white;
+
+    #active {
+        padding: 1em;
+        transition: 0.5s;
+    }
+
+    #link {
+        padding: 1em;
+        transition: 0.5s;
+    }
+
+    :hover {
+        text-decoration: underline;
+        font-size: 2rem;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+}
