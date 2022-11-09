@@ -25,3 +25,26 @@
         cursor: pointer;
     }
 }
+
+.copyright {
+    font-family: Lato;
+    font-size: .75rem;
+    font-style: italic;
+}
+
+.link {
+    font-family: 'Lato', sans-serif;
+    font-style: italic;
+
+    &--inactive {
+        font-size: 1rem;
+        color: #B3B3B3;
+    }
+
+    &:hover {
+        text-decoration: underline;
+        font-size: 2rem;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+}

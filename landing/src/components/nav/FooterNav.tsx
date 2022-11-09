@@ -22,7 +22,7 @@ export const FooterNav = () => {
                 <img src={logo} alt='logo' className='w-32 h-32' />
                 <div className='p-2'>
                     <h1 className='text-2xl text-white' style={{ fontFamily: 'Jua'}}>Mumble Streaming</h1>
-                    <span className='text-[.75rem]' style={{ color: '#AFCBFF'}}>©copyright 2022 Mumble Tech Inc.</span>
+                    <span className='text-[.75rem] copyright' style={{ color: '#AFCBFF'}}>©copyright 2022 Mumble Tech Inc.</span>
                 </div>
                 <div className='flex p-1'>
                     {/* Twitter, Discord, Instagram, GitHub, Twitch */}
@@ -43,41 +43,43 @@ export const FooterNav = () => {
                     </FooterLink>
                 </div>
             </div>
-            <div className='mt-10 p-4'>
-                <h1 className='text-2xl text-white'>About</h1>
-                <ul className='text-white'>
-                    <li>team</li>
-                    <li>faq</li>
-                    <li>careers</li>
-                    <li>changelog</li>
-                    <li>blog</li>
-                </ul>
-            </div>
-            <div className='mt-10 p-4'>
-                <h1 className='text-2xl text-white'>Downloads</h1>
-                <ul className='text-red-200'>
-                    <li>Macos</li>
-                    <li>Windows</li>
-                    <li>Linux</li>
-                </ul>
-            </div>
-            <div className='mt-10 p-4'>
-                <h1 className='text-2xl text-white'>Developers</h1>
-                <ul className='text-white'>
-                    <li>Documentation</li>
-                    <li>Contribute</li>
-                    <li>Extensions</li>
-                    <li>Self Host</li>
-                </ul>
-            </div>
-            <div className='mt-10 p-4'>
-                <h1 className='text-2xl text-white'>Org</h1>
-                <ul className='text-white'>
-                    <li>Patreon</li>
-                    <li>License</li>
-                    <li>Privacy</li>
-                    <li>Terms</li>
-                </ul>
+            <div className='flex font-thin'>
+                <div className='mt-10 p-4'>
+                    <h1 className='text-2xl text-white font-bold'>About</h1>
+                    <ul className='text-white'>
+                        <li className='link'>team</li>
+                        <li className='link'>faq</li>
+                        <li className='link'>careers</li>
+                        <li className='link'>changelog</li>
+                        <li className='link'>blog</li>
+                    </ul>
+                </div>
+                <div className='mt-10 p-4'>
+                    <h1 className='text-2xl text-white font-bold'>Downloads</h1>
+                    <ul className='text-red-200'>
+                        <li className='link--inactive'>Macos</li>
+                        <li className='link--inactive'>Windows</li>
+                        <li className='link--inactive'>Linux</li>
+                    </ul>
+                </div>
+                <div className='mt-10 p-4'>
+                    <h1 className='text-2xl text-white font-bold'>Developers</h1>
+                    <ul className='text-white'>
+                        <li className='link'>Documentation</li>
+                        <li className='link'>Contribute</li>
+                        <li className='link--inactive'>Extensions</li>
+                        <li className='link--inactive'>Self Host</li>
+                    </ul>
+                </div>
+                <div className='mt-10 p-4'>
+                    <h1 className='text-2xl text-white font-bold'>Org</h1>
+                    <ul className='text-white'>
+                        <li className='link'>Patreon</li>
+                        <li className='link--inactive'>License</li>
+                        <li className='link--inactive'>Privacy</li>
+                        <li className='link--inactive'>Terms</li>
+                    </ul>
+                </div>
             </div>
         </section>
     );
