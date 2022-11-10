@@ -13,7 +13,9 @@ export const SocialLinkNav = () => {
           backgroundColor: `#AFCBFF`
         }}
       >
-        <DiGithubBadge className="w-20 h-20 shadow-lg" />
+        <a href='https://github.com/Mumble-Tech/Mumble'>
+          <DiGithubBadge className="w-20 h-20 shadow-lg" />
+        </a>
       </div>
       <div
         className="w-20 h-20 link shadow-md"

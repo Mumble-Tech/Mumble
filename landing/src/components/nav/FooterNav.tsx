@@ -5,13 +5,14 @@ import logo from '../../assets/logo.svg';
 
 interface FooterNavProps {
     children: React.ReactNode;
+    link?: string;
 }
 
-const FooterLink = ({children}: FooterNavProps) => {
+const FooterLink = ({children, link}: FooterNavProps) => {
     return (
-        <div className='p-1'>
+        <a className='p-1' href={link}>
             {children}
-        </div>
+        </a>
     );
 };
 
@@ -26,19 +27,19 @@ export const FooterNav = () => {
                 </div>
                 <div className='flex p-1'>
                     {/* Twitter, Discord, Instagram, GitHub, Twitch */}
-                    <FooterLink>
+                    <FooterLink link='https://twitter.com/EnglishDeondre'>
                         <FaTwitter />
                     </FooterLink>
-                    <FooterLink>
+                    <FooterLink link='https://discord.gg/6D3CBWrvCE'>
                         <FaDiscord />
                     </FooterLink>
-                    <FooterLink>
+                    <FooterLink link=''>
                         <FaInstagram />
                     </FooterLink>
-                    <FooterLink>
+                    <FooterLink link='https://github.com/Mumble-Tech/Mumble'>
                         <FaGithub />
                     </FooterLink>
-                    <FooterLink>
+                    <FooterLink link='https://www.twitch.tv/devmade4'>
                         <FaTwitch />
                     </FooterLink>
                 </div>

@@ -7,11 +7,11 @@ export const HeaderNav = () => {
     return (
         <div className='flex'>
             <div className='flex'>
-                <img src={logo} className='w-32 h-32' />
-                <span className='text-3xl p-10 img-font text-white'>Mumble</span>
+                <a href='/'><img src={logo} className='w-32 h-32' /></a>
+               <span className='text-3xl p-10 img-font text-white'>Mumble</span>
             </div>
             <div className='p-10 justify-center text-2xl font'>
-                <a id='active'>Roadmap</a>
+                <a id='active' href='roadmap'>Roadmap</a>
                 <a id='link'>Team</a>
                 <a id='link'>Blog</a>
                 <a id='link'>Docs</a>
