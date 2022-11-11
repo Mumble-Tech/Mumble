@@ -6,7 +6,7 @@ interface TextComponents {
   className?: string;
 }
 
-export const Heading = ({innerText, className}: TextComponents) => {
+export const Heading = ({ innerText, className }: TextComponents) => {
   return (
     <div className={`flex ${className}`}>
       <h1 className="heading">{innerText}</h1>
@@ -28,12 +28,22 @@ export const Description = (props: TextComponents) => {
 
 export const RoadmapHeading = ({ innerText, className }: TextComponents) => {
   return (
-    <h2 className={`text-3xl ${className}`} style={{ fontFamily: 'Lato', fontWeight: 'bold', fontStyle: 'italic'}}>{innerText}</h2>
+    <h2
+      className={`text-3xl ${className}`}
+      style={{ fontFamily: 'Lato', fontWeight: 'bold', fontStyle: 'italic' }}
+    >
+      {innerText}
+    </h2>
   );
 };
 
 export const RoadmapDescription = ({ innerText, className }: TextComponents) => {
   return (
-    <p className={`text-md ${className} description`} style={{ color: '#695252', textDecoration: 'underline'}}>{innerText}</p>
+    <p
+      className={`text-md ${className} description`}
+      style={{ color: '#695252', textDecoration: 'underline' }}
+    >
+      {innerText}
+    </p>
   );
 };
