@@ -7,6 +7,7 @@ import Landing from './Landing';
 
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import { Roadmap } from './pages/Roadmap';
+import { Team } from './pages/Team';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
@@ -14,6 +15,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/roadmap" element={<Roadmap />} />
+        <Route path="/team" element={<Team />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

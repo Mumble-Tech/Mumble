@@ -47,3 +47,19 @@ export const RoadmapDescription = ({ innerText, className }: TextComponents) => 
     </p>
   );
 };
+
+export const TeamHeading = ({ innerText, className }: TextComponents) => {
+  return (
+    <h3 className={`text-xl ${className}`} style={{ fontFamily: 'Lato', fontWeight: 'bold' }}>
+      {innerText}
+    </h3>
+  );
+};
+
+export const TeamDescription = ({ innerText, className }: TextComponents) => {
+  return (
+    <span className={`text-sm ${className}`} style={{ color: '#695252', fontStyle: 'italic' }}>
+      {innerText}
+    </span>
+  );
+};
