@@ -1,7 +1,27 @@
 .nav {
+    // Font size
+    font-size: 1.5rem;
+    font-family: 'Lato';
+
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    height: 3em;
-    border: 1px solid black;
+    width: 12%;
+    height: 2em;
+    position: fixed;
+    left: 12rem;
+    top: 1.77rem;
+}
+
+.nav-item {
+    transition: 0.3s;
+    cursor: pointer;
+    &:hover {
+        font-size: 1.75rem;
+        text-decoration: underline;
+    }
+
+    &--active {
+        @extend .nav-item;
+        font-style: italic;
+    }
 }

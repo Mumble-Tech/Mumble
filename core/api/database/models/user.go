@@ -26,7 +26,7 @@ func (user *User) HashPassword(password string) error {
 
 // ValidatePhoneNumber
 func (user *User) ValidatePhoneNumber(providedPhoneNumber string) error {
-
+	return nil
 }
 
 // CheckPassword check to make sure the hash worked
