@@ -6,7 +6,7 @@ import { CommentInput } from '../../components/Stream/CommentInput';
 
 const Watch: NextPage = () => {
   return (
-    <div className='custom-scroll'>
+    <div className="custom-scroll">
       <CommentContainer>
         <Comment commentContent={'Welcome to the world of comments testing the content'} />
         <Comment commentContent={'working dev'} />

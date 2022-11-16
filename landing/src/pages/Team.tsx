@@ -33,13 +33,19 @@ export const Team = () => {
             <div className="p-1"></div>
             <div className="flex">
               <div className="">
-                <a href='https://twitter.com/Deondre19753361'><FaTwitter /></a>
+                <a href="https://twitter.com/Deondre19753361">
+                  <FaTwitter />
+                </a>
               </div>
               <div className="ml-2">
-                <a href='https://github.com/deondreE'><FaGithub /></a>
+                <a href="https://github.com/deondreE">
+                  <FaGithub />
+                </a>
               </div>
               <div className="ml-2">
-                <a href='https://www.twitch.tv/devmade4'><FaTwitch /></a>
+                <a href="https://www.twitch.tv/devmade4">
+                  <FaTwitch />
+                </a>
               </div>
             </div>
           </div>

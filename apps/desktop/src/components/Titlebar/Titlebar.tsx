@@ -2,7 +2,7 @@ import './Titlebar.scss';
 import logo from '../../assets/logo.jpg';
 import personIcon from '../../assets/person_icon.svg';
 import circle from '../../assets/circle.svg';
-
+import { Navbar } from '../Header/Navbar';
 export const Titlebar = () => {
   return (
     <div data-tauri-drag-region className="titlebar lato">
@@ -12,10 +12,9 @@ export const Titlebar = () => {
         <h2>Mumble</h2>
       </div>
 
-      {/* Editor / Live Links */}
-      <div className="links">
-        <h1 className="scene-link--active">Editor</h1>
-        <h1 className="scene-link">Live</h1>
+      {/* Navbar */}
+      <div className="">
+        <Navbar />
       </div>
 
       {/* Live status */}
