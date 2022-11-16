@@ -11,6 +11,7 @@ import { useRecoilState, useRecoilValue } from 'recoil';
 import { contentDrawerActive } from './components/Scene/State/recoil_state';
 import { ContentDrawer } from './components/Scene/ContentDrawer/ContentDrawer';
 import { useHotkeys } from 'react-hotkeys-hook';
+import { generate } from './api/generate';
 
 function App() {
   // setGreetMsg(await invoke("record"));
@@ -28,9 +29,13 @@ function App() {
     <>
       <Footer />
       <div>
+        {/* <button className="btn" onClick={generate}>
+          Generate
+        </button> */}
         <Scene />
       </div>
       <Titlebar />
+      {/* <button onClick={generate}>generate powerpoint</button> */}
       <div>{contentDrawer ? <ContentDrawer className="content-drawer-pos" /> : <></>}</div>
     </>
   );
