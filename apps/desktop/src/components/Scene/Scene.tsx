@@ -1,6 +1,6 @@
 import './scene.scss';
 
-import { useRecoilState, useRecoilValue } from 'recoil';
+import { useRecoilValue } from 'recoil';
 import { filteredContentState } from './State/recoil_state';
 import {
   CreateSceneChild,
@@ -18,14 +18,17 @@ export const Scene = (props: SceneProps) => {
   let content = useRecoilValue(filteredContentState);
 
   return (
-    // ! Map the content of the scene drawer to the scene.
     <div className="scene" id="parent-scene">
       {content.map((index, key) => {
         switch (index) {
           case 'Camera':
-            return <CreateSceneChild name="Camera" type={SceneChild.CAMERA} />;
+            return <CreateSceneChild name="Camera" type={SceneChild.CAMERA} key={key} />;
           case 'Powerpoint':
-            return <CreateSceneChild name="Powerpoint" type={SceneChild.POWERPOINT} />;
+            return <CreateSceneChild name="Powerpoint" type={SceneChild.POWERPOINT} key={key} />;
+          case 'Image':
+            return <CreateSceneChild name="Image" type={SceneChild.IMAGE} key={key} />;
+          case 'Text':
+            return <CreateSceneChild name="Text" type={SceneChild.TEXT} key={key} />;
           default:
             return <div key={key}></div>;
         }

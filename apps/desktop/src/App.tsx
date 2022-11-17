@@ -12,6 +12,7 @@ import { contentDrawerActive } from './components/Scene/State/recoil_state';
 import { ContentDrawer } from './components/Scene/ContentDrawer/ContentDrawer';
 import { useHotkeys } from 'react-hotkeys-hook';
 import { usePressObserver } from './hooks/usePressObserver';
+import { SceneEditor } from './pages/tabs/Editor/SceneEditor';
 
 function App() {
   // setGreetMsg(await invoke("record"));
@@ -27,7 +28,7 @@ function App() {
     <div>
       <Footer />
       <div>
-        <Scene />
+        <SceneEditor />
       </div>
       <Titlebar />
       <div>{contentDrawer ? <ContentDrawer className="content-drawer-pos" /> : <></>}</div>

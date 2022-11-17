@@ -7,7 +7,7 @@ export const contentDrawerActive = atom({
 
 export const contentState = atom({
   key: 'contentState',
-  default: ['Camera', 'Powerpoint']
+  default: ['Camera', 'Powerpoint', 'Image', 'Text']
 });
 
 const contentFilterState = atom({

@@ -11,61 +11,72 @@ export enum SceneChild {
 
 interface SceneChildProps {
   name: string;
-  content?: any; // ! Not going to be a string finnally
+  content?: Content; // ! Will eventually be a JSON object
   size?: [''];
   type: SceneChild;
   resizable?: boolean;
+  key?: any;
 }
 
-const noSize = (size: any, type: SceneChild): any => {
-  if (!size) {
-    switch (type) {
-      case SceneChild.POWERPOINT:
-        return ['300px', '300px'];
-      case SceneChild.IMAGE:
-        return ['300px', '300px'];
-      case SceneChild.TEXT:
-        return ['auto', 'auto'];
-      case SceneChild.CAMERA:
-        return ['50px', '50px'];
-      default:
-        return ['50px', '50px'];
-    }
-  }
-};
+interface Content {
+  width: string;
+  height: string;
+  backgroundColor: string;
+}
 
-const checkColor = (type: SceneChild): string => {
+function componentFormat(type: SceneChild): Content {
   switch (type) {
     case SceneChild.POWERPOINT:
-      return '#ab6441';
+      return {
+        width: '300px',
+        height: '300px',
+        backgroundColor: '#ab6441'
+      };
     case SceneChild.CAMERA:
-      return '#4c7555';
+      return {
+        width: '50px',
+        height: '50px',
+        backgroundColor: '#4c7555'
+      };
     case SceneChild.TEXT:
-      return 'transparent';
+      return {
+        width: '15%',
+        height: 'auto',
+        backgroundColor: 'transparent'
+      };
     case SceneChild.IMAGE:
-      return 'transarent';
+      return {
+        width: '300px',
+        height: '300px',
+        backgroundColor: 'transparent'
+      };
     default:
-      return '#ffffff';
+      return {
+        width: '50px',
+        height: '50px',
+        backgroundColor: '#ffffff'
+      };
   }
-};
+}
 
 /**
  *  This Creates The Children for the current Scene.
  */
 export const CreateSceneChild = (props: SceneChildProps) => {
   const file: any = useRecoilValue(filePreviewState);
-  let content = noSize(props.size, props.type);
+  let content = componentFormat(props.type);
 
   return (
     <div
       className="child"
       style={{
-        width: `${content[0]}`,
-        height: `${content[1]}`,
-        minWidth: `${content[0]}`,
-        minHeight: `${content[1]}`,
-        backgroundColor: `${checkColor(props.type)}`
+        width: `${content.width}`,
+        height: `${content.height}`,
+        minWidth: `${content.width}`,
+        minHeight: `${content.height}`,
+        backgroundColor: `${content.backgroundColor}`
       }}
+      key={props.key}
     >
       {props.name}
       {/* Image Preview from Content Drawer */}
