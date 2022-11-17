@@ -1,5 +1,5 @@
 import './contentdrawer.scss';
-import { SceneContent } from './SceneContent/DashboardContent';
+import { SceneContent } from './SceneContent/SceneContent';
 
 export const ContentDrawer = (props: { className: string }) => {
   return (

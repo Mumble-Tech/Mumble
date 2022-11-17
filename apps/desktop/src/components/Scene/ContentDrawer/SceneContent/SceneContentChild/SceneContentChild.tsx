@@ -62,6 +62,8 @@ export const CreateSceneChild = (props: SceneChildProps) => {
       style={{
         width: `${content[0]}`,
         height: `${content[1]}`,
+        minWidth: `${content[0]}`,
+        minHeight: `${content[1]}`,
         backgroundColor: `${checkColor(props.type)}`
       }}
     >

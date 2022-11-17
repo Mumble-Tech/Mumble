@@ -1,4 +1,4 @@
-import './dashboardcontent.scss';
+import './scenecontent.scss';
 
 import { useRef } from 'react';
 import { SceneList } from './SceneList/SceneList';
