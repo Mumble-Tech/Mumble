@@ -6,6 +6,7 @@ import {
   CreateSceneChild,
   SceneChild
 } from './ContentDrawer/SceneContent/SceneContentChild/SceneContentChild';
+import { AddContentButton } from '../SceneEditor/Buttons/AddContentButton';
 
 interface SceneProps {
   sceneName?: string;
@@ -19,6 +20,7 @@ export const Scene = (props: SceneProps) => {
 
   return (
     <div className="scene" id="parent-scene">
+      <AddContentButton />
       {content.map((index, key) => {
         switch (index) {
           case 'Camera':

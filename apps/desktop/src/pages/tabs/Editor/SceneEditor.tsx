@@ -2,11 +2,14 @@ import { Scene } from '../../../components/Scene/Scene';
 
 export const SceneEditor = () => {
   return (
-    <div>
+    <div className='block'>
       <h1>Scene Editor</h1>
+      
       <div>
         <Scene />
+        
       </div>
+      
     </div>
   );
 };

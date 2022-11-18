@@ -3,11 +3,17 @@
     color: black;
     resize: both;
 
-    max-width: 50vw;
-    max-height: 50vh;
+    max-width: 25vw;
+    max-height: 25vh;
+
     overflow: hidden;
 
-    padding: 1rem;
+    font-size: max(1.5vw, 1.5vh);
+
+    padding: 1em;
+
+    border: transparent;
+    border-radius: 1rem;
     
     // Image Preview
     &--preview {
