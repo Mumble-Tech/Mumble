@@ -1,4 +1,22 @@
+.add-content {
+    width: 15rem;
+    height: 2rem;
 
-.add-content-btn {
-    width: 30rem;
+    &--input {
+        @extend .add-content;
+        width: 10rem !important;
+        overflow: hidden;
+    }
+
+    &--container {
+       display: grid;
+    }
+
+    &--btn {
+        @extend .add-content;
+    }
+
+    &--submit {
+        @extend .add-content;
+    }
 }

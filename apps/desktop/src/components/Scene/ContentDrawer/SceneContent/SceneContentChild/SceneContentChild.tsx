@@ -1,5 +1,5 @@
-import { useRecoilValue } from 'recoil';
-import { filePreviewState } from '../../../State/recoil_state';
+import { useRecoilState, useRecoilValue } from 'recoil';
+import { filePreviewState, innerText } from '../../../State/recoil_state';
 import './child.scss';
 
 export enum SceneChild {
@@ -22,9 +22,11 @@ interface Content {
   width: string;
   height: string;
   backgroundColor: string;
+  innerContent?: React.ReactNode;
 }
 
 function componentFormat(type: SceneChild): Content {
+  const [text, setInnerText]: any = useRecoilState(innerText);
   switch (type) {
     case SceneChild.POWERPOINT:
       return {
@@ -42,7 +44,8 @@ function componentFormat(type: SceneChild): Content {
       return {
         width: '15%',
         height: 'auto',
-        backgroundColor: 'transparent'
+        backgroundColor: 'transparent',
+        innerContent: <p>{text}</p>
       };
     case SceneChild.IMAGE:
       return {
@@ -52,9 +55,9 @@ function componentFormat(type: SceneChild): Content {
       };
     default:
       return {
-        width: '50px',
-        height: '50px',
-        backgroundColor: '#ffffff'
+        width: '300px',
+        height: '300px',
+        backgroundColor: '#ab6441'
       };
   }
 }
@@ -78,7 +81,7 @@ export const CreateSceneChild = (props: SceneChildProps) => {
       }}
       key={props.key}
     >
-      {props.name}
+      {content.innerContent}
       {/* Image Preview from Content Drawer */}
       <img src={file} className=".child-preview" />
     </div>

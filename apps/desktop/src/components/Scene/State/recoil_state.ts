@@ -7,7 +7,12 @@ export const contentDrawerActive = atom({
 
 export const contentState = atom({
   key: 'contentState',
-  default: ['Text']
+  default: []
+});
+
+export const innerText = atom({
+  key: 'innerText',
+  default: '',
 });
 
 const contentFilterState = atom({

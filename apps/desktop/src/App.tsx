@@ -13,6 +13,7 @@ import { ContentDrawer } from './components/Scene/ContentDrawer/ContentDrawer';
 import { useHotkeys } from 'react-hotkeys-hook';
 import { usePressObserver } from './hooks/usePressObserver';
 import { SceneEditor } from './pages/tabs/Editor/SceneEditor';
+import { DefaultLayout } from './components/Layout/Default';
 
 function App() {
   // setGreetMsg(await invoke("record"));
@@ -25,15 +26,15 @@ function App() {
   let contentDrawer = usePressObserver({ watchKey: 'l' });
 
   return (
-    <div>
-      <Footer />
+    <DefaultLayout>
+      <Titlebar />
       <div>
         <SceneEditor />
       </div>
-      <Titlebar />
+      <Footer />
       <div>{contentDrawer ? <ContentDrawer className="content-drawer-pos" /> : <></>}</div>
       {/* Why is this upsidedown order is this a tauri thing?? */}
-    </div>
+    </DefaultLayout>
   );
 }
 

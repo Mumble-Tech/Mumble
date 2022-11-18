@@ -21,6 +21,7 @@ export const Scene = (props: SceneProps) => {
   return (
     <div className="scene" id="parent-scene">
       <AddContentButton />
+      {/* Currently the Scene is built by adding content into a list. */}
       {content.map((index, key) => {
         switch (index) {
           case 'Camera':
