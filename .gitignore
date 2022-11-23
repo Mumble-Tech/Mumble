@@ -18,6 +18,7 @@ node_modules
 *.sql
 db
 migrations
+test
 
 # Rust
 bin

@@ -20,8 +20,9 @@ export const Scene = (props: SceneProps) => {
 
   return (
     <div className="scene" id="parent-scene">
-      <AddContentButton />
+      <AddContentButton /> 
       {/* Currently the Scene is built by adding content into a list. */}
+      {/* The Scene is going to be displayed as a grid that, when on the editor tab items become editable, and when in the Live view it is not */}
       {content.map((index, key) => {
         switch (index) {
           case 'Camera':
