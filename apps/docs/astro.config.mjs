@@ -5,5 +5,17 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind()]
+  markdown: {
+    drafts: true,
+    ShikiConfig: {
+      theme: 'nord',
+      langs: [],
+      wrap: true,
+    },
+  },
+  integrations: [
+    tailwind(),
+    mdx({
+       drafts: true 
+      })], 
 });

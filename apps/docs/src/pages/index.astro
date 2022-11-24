@@ -1,6 +1,10 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+interface Frontmatter {
+	title: string;
+	description?: string;
+}
+
+const posts = await Astro.glob<Frontmatter>('../markdown/*.md');
 ---
 
 <html>
@@ -10,7 +14,10 @@ import Card from '../components/Card.astro';
 </head>
 .</html>
 <body>
-	
+	<ul>
+		{posts.map(post => <li>{post.frontmatter.title}</li>)}
+		<!-- post.frontmatter.title will be `string`! -->
+	</ul>
 </body>
 
 </html>
