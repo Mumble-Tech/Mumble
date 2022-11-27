@@ -3,32 +3,32 @@ import { strictEqual } from 'assert';
 import { useEffect, useState } from 'react';
 
 interface Settings {
-  watchKey: string;
+    watchKey: string;
 }
 
 export function usePressObserver({ watchKey }: Settings): boolean {
-  const [pressed, setPressed] = useState<boolean>(false);
+    const [pressed, setPressed] = useState<boolean>(false);
 
-  useEffect(() => {
-    function handlePressStart({ code }: KeyboardEvent): void {
-      if (pressed || watchKey !== code) return;
+    useEffect(() => {
+        function handlePressStart({ code }: KeyboardEvent): void {
+            if (pressed || watchKey !== code) return;
 
-      setPressed(true);
-    }
+            setPressed(true);
+        }
 
-    function handlePressFinish({ code }: KeyboardEvent): void {
-      if (!pressed || watchKey !== code) return;
-      setPressed(false);
-    }
+        function handlePressFinish({ code }: KeyboardEvent): void {
+            if (!pressed || watchKey !== code) return;
+            setPressed(false);
+        }
 
-    document.addEventListener('keydown', handlePressStart);
-    document.addEventListener('keyup', handlePressFinish);
+        document.addEventListener('keydown', handlePressStart);
+        document.addEventListener('keyup', handlePressFinish);
 
-    return () => {
-      document.removeEventListener('keydown', handlePressStart);
-      document.removeEventListener('keyup', handlePressFinish);
-    };
-  }, [watchKey, pressed]);
+        return () => {
+            document.removeEventListener('keydown', handlePressStart);
+            document.removeEventListener('keyup', handlePressFinish);
+        };
+    }, [watchKey, pressed]);
 
-  return pressed;
+    return pressed;
 }

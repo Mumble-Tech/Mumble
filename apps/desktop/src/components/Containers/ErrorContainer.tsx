@@ -1,11 +1,11 @@
 interface errorProps {
-  text: string;
+    text: string;
 }
 
 export const ErorrContainer = (props: errorProps) => {
-  return (
-    <div className="erorr-container">
-      <span className="erorr-message">{props.text}</span>
-    </div>
-  );
+    return (
+        <div className="erorr-container">
+            <span className="erorr-message">{props.text}</span>
+        </div>
+    );
 };

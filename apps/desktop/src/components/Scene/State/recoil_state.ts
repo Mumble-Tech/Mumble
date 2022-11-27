@@ -1,39 +1,39 @@
 import { atom, selector } from 'recoil';
 
 export const contentDrawerActive = atom({
-  key: 'contentDrawerActive',
-  default: false
+    key: 'contentDrawerActive',
+    default: false,
 });
 
 export const contentState = atom({
-  key: 'contentState',
-  default: []
+    key: 'contentState',
+    default: [],
 });
 
 export const innerText = atom({
-  key: 'innerText',
-  default: '',
+    key: 'innerText',
+    default: '',
 });
 
 const contentFilterState = atom({
-  key: 'cotentFilterState',
-  default: 'Show All'
+    key: 'cotentFilterState',
+    default: 'Show All',
 });
 
 export const filePreviewState = atom({
-  key: 'filePreviewState',
-  default: ''
+    key: 'filePreviewState',
+    default: '',
 });
 
 export const filteredContentState = selector({
-  key: 'filteredContentState',
-  get: ({ get }) => {
-    const filter = get(contentFilterState);
-    const content = get(contentState);
+    key: 'filteredContentState',
+    get: ({ get }) => {
+        const filter = get(contentFilterState);
+        const content = get(contentState);
 
-    switch (filter) {
-      default:
-        return content;
-    }
-  }
+        switch (filter) {
+            default:
+                return content;
+        }
+    },
 });

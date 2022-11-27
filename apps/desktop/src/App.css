@@ -1,28 +1,28 @@
 .logo.vite:hover {
-  filter: drop-shadow(0 0 2em #747bff);
+    filter: drop-shadow(0 0 2em #747bff);
 }
 
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafb);
+    filter: drop-shadow(0 0 2em #61dafb);
 }
 
 .content-drawer-pos {
-  position: fixed;
-  width: auto;
-  bottom: 5em;
+    position: fixed;
+    width: auto;
+    bottom: 5em;
 }
 
 .btn {
-  background-color: #747bff;
-  color: white;
-  border: none;
-  border-radius: 0.5em;
-  padding: 0.5em 1em;
-  font-size: 1.5em;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
-  z-index: 2;
-  position: fixed;
-  top: 10em;
+    background-color: #747bff;
+    color: white;
+    border: none;
+    border-radius: 0.5em;
+    padding: 0.5em 1em;
+    font-size: 1.5em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 2;
+    position: fixed;
+    top: 10em;
 }

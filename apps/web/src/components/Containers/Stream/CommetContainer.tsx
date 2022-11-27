@@ -1,14 +1,14 @@
 type CommentContainerProps = {
-  children: React.ReactNode;
+    children: React.ReactNode;
 };
 
 /** Container for the commment section of streams, commets can be toggled. */
 const CommentContainer = ({ children }: CommentContainerProps) => {
-  return (
-    <div className="p-6 relative left-[2em] top-[6em] bg-sky-800 w-96 h-[40rem] border rounded-md overflow-y-scroll">
-      {children}
-    </div>
-  );
+    return (
+        <div className="relative left-[2em] top-[6em] h-[40rem] w-96 overflow-y-scroll rounded-md border bg-sky-800 p-6">
+            {children}
+        </div>
+    );
 };
 
 export default CommentContainer;

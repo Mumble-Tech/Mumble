@@ -1,0 +1,19 @@
+{
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "typescript.enablePromptUseWorkspaceTsdk": true,
+    "editor.formatOnSave": true,
+    // Auto-fix issues with ESLint when you save code changes
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "workbench.colorCustomizations": {
+      "titleBar.activeBackground": "#2596be",
+      "titleBar.activeForeground": "#ffffff",
+      "titleBar.inactiveBackground": "#004a72",
+      "titleBar.inactiveForeground": "#639db2"
+    },
+    "editor.stickyScroll.enabled": true,
+    "tailwindCSS.experimental.classRegex": [
+      ["clsx\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
+    ]
+  }

@@ -3,9 +3,5 @@ interface DefaultLayoutProps {
 }
 
 export const DefaultLayout = ({ children }: DefaultLayoutProps) => {
-    return (
-        <div>
-            {children}
-        </div>
-    );
+    return <div>{children}</div>;
 };

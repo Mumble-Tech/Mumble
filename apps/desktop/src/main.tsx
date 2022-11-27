@@ -5,9 +5,9 @@ import App from './App';
 import './style.scss';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <React.StrictMode>
-    <RecoilRoot>
-      <App />
-    </RecoilRoot>
-  </React.StrictMode>
+    <React.StrictMode>
+        <RecoilRoot>
+            <App />
+        </RecoilRoot>
+    </React.StrictMode>,
 );

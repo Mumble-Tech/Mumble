@@ -7,13 +7,12 @@
   "author": "deondreE <deondreenglish45@gmail.com>",
   "private": true,
   "scripts": {
-    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,json}' --config ./.prettierrc",
+    "format": "prettier --write './apps/**' --config ./.prettierrc.js",
     "typecheck": "pnpm -r exec tsc"
   },
   "devDependencies": {
-    "prettier": "^2.7.1",
+    "prettier": "^2.7.1", 
     "prettier-plugin-go-template": "^0.0.13",
-    "turbo": "^1.6.1",
     "typescript": "*"
   },
   "engines": {
