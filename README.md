@@ -14,6 +14,7 @@ Development of Mumble happends in the open on GitHub, and we are greatful for an
 
 - [Contribution Guide](./docs/CONTRIBUTING.md)
 - [Code of Conduct](./docs/CODE_OF_CONDUCT.md)
+- Check the TODO doc to see what is currently being Worked on [Here](./TODO.md)
 
 ---
 
