@@ -16,7 +16,7 @@
     "typescript": "*"
   },
   "engines": {
-    "pnpm": "7.13.4",
+    "pnpm": "7.17.1",
     "npm": "pnpm",
     "yarn": "pnpm",
     "node": ">=14.0.0"
