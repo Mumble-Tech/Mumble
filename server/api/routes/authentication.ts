@@ -5,7 +5,8 @@ import { PrismaClient } from '@prisma/client';
 const router = Router();
 
 const prisma = new PrismaClient();
-prisma.$connect();
+
+// ! ERROR: Primsa is not connection properly
 
 router.get('/', (req: Request, res: Response): void => {  
     const users = prisma.user.findMany({
