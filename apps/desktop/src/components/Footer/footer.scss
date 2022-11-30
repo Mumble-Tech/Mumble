@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
-
 .footer {
     display: flex;
     position: fixed;
@@ -21,27 +20,27 @@
 
 .pos-right {
     position: fixed;
-    right: 10.25em; 
+    right: 10.25em;
     margin-top: 2px;
 }
 
 .seperator {
-    border-right: 1px solid #005D62;
+    border-right: 1px solid #005d62;
     height: 2rem;
 
     &--left {
         @extend .seperator;
 
         border-right: none;
-        border-left: 1px solid #005D62;
+        border-left: 1px solid #005d62;
     }
 }
 
 .percent {
     font-size: 8px;
-    color: #005D62;
+    color: #005d62;
     margin-left: 2.5rem;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
 }
 
 .cpu {
@@ -50,7 +49,7 @@
 
     padding: 5px;
     position: fixed;
-    left: .5;
+    left: 0.5;
     bottom: 0;
 }
 
@@ -63,7 +62,7 @@
 
 .fps {
     font-size: 10px;
-    color: #005D62;
+    color: #005d62;
     position: fixed;
     left: 7.25rem;
     margin-top: 3px;
@@ -87,12 +86,12 @@
 
 .last {
     padding: 5px;
-    border-right: 1px solid #005D62;
+    border-right: 1px solid #005d62;
 }
 
 .image-cont {
     display: flex;
-    justify-content:  baseline;
+    justify-content: baseline;
     align-items: baseline;
 }
 
@@ -101,13 +100,12 @@
     position: fixed;
     right: 1em;
 
-    
     padding: 8px;
     width: 8em;
 
-    border: 1px solid #E58F00;
+    border: 1px solid #e58f00;
     border-radius: 3px;
-    background-color: #E58F00;
+    background-color: #e58f00;
 
     //  font
     font-weight: bold;

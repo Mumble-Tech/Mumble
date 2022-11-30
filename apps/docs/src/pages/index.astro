@@ -1,35 +1,37 @@
 ---
-import Description from "../components/Description.astro";
-import Title from "../components/Title.astro";
+import Description from '../components/Description.astro';
+import Title from '../components/Title.astro';
 interface Frontmatter {
-	title: string;
-	description?: string;
+    title: string;
+    description?: string;
 }
 
 const posts = await Astro.glob<Frontmatter>('../markdown/*.mdx');
 ---
 
 <html>
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width" />
-	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-	<meta name="generator" content="Mumble Docs" />
-	<title>Docs - Mumble Dev / Streaming app</title>
-</head>
-.</html>
-<body>
-	{posts.map(post => {
-		return (
-			<article class="grid grid-cols-3">
-				<div>
-					<Title>{post.frontmatter.title}</Title>
-					<Description>{post.frontmatter.description}</Description>
-				</div>
-				
-			</article>
-		)
-	})}
-</body>
-
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content="Mumble Docs" />
+        <title>Docs - Mumble Dev / Streaming app</title>
+    </head>
+    .
 </html>
+<body>
+    {
+        posts.map((post) => {
+            return (
+                <article class="grid grid-cols-3">
+                    <div>
+                        <Title>{post.frontmatter.title}</Title>
+                        <Description>
+                            {post.frontmatter.description}
+                        </Description>
+                    </div>
+                </article>
+            );
+        })
+    }
+</body>

@@ -6,8 +6,7 @@
     "lint": "eslint . --ext .ts",
     "prebuild": "eslint . --ext .ts && tsconfig.json --fix",
     "build": "tsc",
-    "dev": "pnpm build && node .",
-    "test": "pnpm build && node dist/socket.js && node dist/client.js"
+    "dev": "pnpm build && node ."
   },
   "author": "deondreE",
   "dependencies": {

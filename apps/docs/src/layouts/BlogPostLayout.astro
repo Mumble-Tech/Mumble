@@ -3,10 +3,14 @@ const { frontmatter } = Astro.props;
 ---
 
 <html>
-  <!-- ... -->
-  <h1>{frontmatter.title}</h1>
-  <h2>Post author: {frontmatter.author}</h2>
-  <p>{frontmatter.description}<p>
-  <slot /> <!-- Markdown content is injected here -->
-   <!-- ... -->
+    <!-- ... -->
+    <h1>{frontmatter.title}</h1>
+    <h2>Post author: {frontmatter.author}</h2>
+    <p>
+        {frontmatter.description}<p>
+            <slot />
+            <!-- Markdown content is injected here -->
+            <!-- ... -->
+        </p>
+    </p>
 </html>

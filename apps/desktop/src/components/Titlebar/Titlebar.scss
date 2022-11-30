@@ -1,13 +1,13 @@
 @import '../../sass/_variables';
 
 .lato {
-  font-family: $Lato-Family;
-  color: white;
+    font-family: $Lato-Family;
+    color: white;
 }
 
 .titlebar {
     height: 70px;
-    background: #0F2940;
+    background: #0f2940;
     user-select: none;
     display: flex;
     justify-content: flex-end;
@@ -17,20 +17,20 @@
     right: 0;
 
     h2 {
-      font-family: $Jua-Family;
-      font-size: 2rem;
+        font-family: $Jua-Family;
+        font-size: 2rem;
     }
-  }
+}
 
-  .logo {
+.logo {
     display: flex;
     float: left;
-    width: 1.25em; 
+    width: 1.25em;
     position: fixed;
     left: 0;
-  }
+}
 
-  .links {
+.links {
     display: flex;
     position: fixed;
     left: 0;
@@ -39,44 +39,44 @@
 
     /* font things */
     font-weight: 400;
-  }
+}
 
-  .icon {
+.icon {
     width: 2em;
     height: 2em;
 
     padding: 1em;
-  }
+}
 
-  .text {
+.text {
     font-size: 1.25rem;
     position: fixed;
     top: 1em;
     font-family: $Jua-Family;
-  }
+}
 
-  .container {
+.container {
     // TODO: Move the container correctly.
-  }
+}
 
-  .flex {
+.flex {
     display: flex;
-  }
+}
 
-  .scene-link {
+.scene-link {
     font-weight: 300;
 
     cursor: pointer;
 
     &--active {
-      @extend .scene-link;
+        @extend .scene-link;
 
-      margin-right: 1em;
-      text-decoration: underline;
+        margin-right: 1em;
+        text-decoration: underline;
     }
-  }
+}
 
-  .img {
+.img {
     width: 4em;
-    padding: .15rem;
-  }
+    padding: 0.15rem;
+}
