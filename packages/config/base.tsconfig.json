@@ -1,0 +1,31 @@
+{
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "display": "Default",
+    "compilerOptions": {
+        "lib": ["DOM", "DOM.Iterable", "ESNext"],
+        "declaration": false,
+        "noEmit": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "inlineSorces": false,
+        "isolatedModules": false,
+        "module": "ESNext",
+        "target": "ESNext",
+        "moduleResolution": "node",
+        "noUnusedLocals": false,
+        "noUnusedParameters": false,
+        "preserveWatchOutput": true,
+        "skipLibCheck": true,
+        "strict": true,
+        "allowSyntheticDefaultImports": true,
+        "resolveJsonModule": true,
+        "jsx": "react-jsx",
+        "paths": {
+			"@sd/interface": ["../../packages/interface"],
+			"@sd/ui": ["../../packages/ui"],
+			"@sd/client": ["../../packages/client"],
+			"@sd/assets": ["../../packages/assets"]
+		}
+    },
+    "exclude": ["node_modules"]
+}
