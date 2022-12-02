@@ -1,0 +1,17 @@
+{
+  "name": "@mum/config",
+  "version": "0.0.0",
+  "main": "index.js",
+  "license": "GPL-3.0-only",
+  "files": [
+		"eslint-react.js"
+	],
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.33.0",
+    "@typescript-eslint/parser": "^5.33.0",
+    "eslint": "^8.28.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-react": "^7.31.11",
+    "eslint-plugin-react-hooks": "^4.6.0"
+  }
+}

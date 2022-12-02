@@ -11,7 +11,7 @@
     "typecheck": "pnpm -r exec tsc"
   },
   "devDependencies": {
-    "prettier": "^2.7.1", 
+    "prettier": "^2.7.1",
     "prettier-plugin-go-template": "^0.0.13",
     "typescript": "*"
   },
@@ -22,6 +22,8 @@
     "node": ">=14.0.0"
   },
   "dependencies": {
-    "packages": "link:/Users/deondreenglish/Projects/Mumble/packages"
+    "packages": "link:/Users/deondreenglish/Projects/Mumble/packages",
+    "turbo": "^1.6.3",
+    "turbo-ignore": "^0.5.0"
   }
 }
