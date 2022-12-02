@@ -10,9 +10,69 @@ datasource db {
   url      = "postgresql://Deondre:password@localhost:5432/MumbleDB?schema=public"
 }
 
+// ! What if the user bloaks someone?
+// ? Should this be called a Stream or a Channel rather than a user?
+
 model User {
-  id       Int     @id @default(autoincrement())
-  email    String
-  username String?
-  password String?
+  id        Int       @id @default(autoincrement()) // Int is an auto-incrementing integer
+  email     String    @unique
+  username  String?   @unique
+  password  String?
+  followers Int?
+  role      Role?     @relation(fields: [roleId], references: [id])
+  roleId    Int?
+  Comment   Comment[]
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  deletedAt DateTime?
+}
+
+model Role {
+  id      Int       @id @default(autoincrement())
+  name    String    @unique
+  users   User[]
+  Comment Comment[]
+}
+
+// ! Users have a given role then they need to add it the comment on the given stream.
+// ! Eventually there will be a VOD or static video after the sream is over.
+
+model Comment {
+  id        Int       @id @default(autoincrement())
+  content   String
+  user      User      @relation(fields: [userId], references: [id])
+  userId    Int
+  role      Role      @relation(fields: [roleId], references: [id])
+  roleId    Int
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  deletedAt DateTime?
+}
+
+// ? Questions to Ask
+// ? What if the user wants to record in only audio? 
+// ? What if the user needs to know the length and size of a Video?
+// ? Wha if the user needs to know the size of an image before export / upload?
+
+// !Videos will be sored in a valid CDN thne the URL will be stored in the database 
+// !same goes for the pictures
+model Video {
+  id        Int      @id @default(autoincrement())
+  title     String
+  location  String
+  createdAt DateTime @default(now())
+}
+
+model AudioFile {
+  id        Int      @id @default(autoincrement())
+  title     String
+  location  String
+  length    Int?
+  createdAt DateTime @default(now())
+}
+
+model Image {
+  id        Int      @id @default(autoincrement())
+  location  String
+  createdAt DateTime @default(now())
 }
