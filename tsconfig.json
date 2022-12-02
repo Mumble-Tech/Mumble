@@ -1,0 +1,26 @@
+{
+	"files": [],
+	"references": [
+		{
+			"path": "apps/desktop"
+		},
+		{
+			"path": "apps/mobile"
+		},
+		{
+			"path": "apps/web"
+		},
+		{
+			"path": "apps/landing"
+		},
+		{
+			"path": "packages/client"
+		},
+		{
+			"path": "packages/interface"
+		},
+		{
+			"path": "packages/ui"
+		}
+	]
+}
