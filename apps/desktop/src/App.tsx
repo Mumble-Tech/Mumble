@@ -1,47 +1,50 @@
-import './App.css';
-
-import { Titlebar } from './components/Titlebar/Titlebar';
-
-// Scene Information
-import { Scene } from './components/Scene/Scene';
-import { Footer } from './components/Footer/Footer';
-
-// State things
-import { useRecoilState, useRecoilValue } from 'recoil';
-import { contentDrawerActive } from './components/Scene/State/recoil_state';
-import { ContentDrawer } from './components/Scene/ContentDrawer/ContentDrawer';
-import { useHotkeys } from 'react-hotkeys-hook';
-import { usePressObserver } from './hooks/usePressObserver';
-import { SceneEditor } from './pages/tabs/Editor/SceneEditor';
-import { DefaultLayout } from './components/Layout/Default';
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import { invoke } from "@tauri-apps/api/tauri";
+import "./App.css";
 
 function App() {
-    // setGreetMsg(await invoke("record"));
-    const [active, setActive] = useRecoilState(contentDrawerActive);
+  const [greetMsg, setGreetMsg] = useState("");
+  const [name, setName] = useState("");
 
-    useHotkeys('cmd+l', () => {
-        setActive(!active);
-    });
+  async function greet() {
+    // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
+    setGreetMsg(await invoke("greet", { name }));
+  }
 
-    let contentDrawer = usePressObserver({ watchKey: 'l' });
+  return (
+    <div className="container">
+      <h1>Welcome to Tauri!</h1>
 
-    return (
-        <DefaultLayout>
-            <Titlebar />
-            <div>
-                <SceneEditor />
-            </div>
-            <Footer />
-            <div>
-                {contentDrawer ? (
-                    <ContentDrawer className="content-drawer-pos" />
-                ) : (
-                    <></>
-                )}
-            </div>
-            {/* Why is this upsidedown order is this a tauri thing?? */}
-        </DefaultLayout>
-    );
+      <div className="row">
+        <a href="https://vitejs.dev" target="_blank">
+          <img src="/vite.svg" className="logo vite" alt="Vite logo" />
+        </a>
+        <a href="https://tauri.app" target="_blank">
+          <img src="/tauri.svg" className="logo tauri" alt="Tauri logo" />
+        </a>
+        <a href="https://reactjs.org" target="_blank">
+          <img src={reactLogo} className="logo react" alt="React logo" />
+        </a>
+      </div>
+
+      <p>Click on the Tauri, Vite, and React logos to learn more.</p>
+
+      <div className="row">
+        <div>
+          <input
+            id="greet-input"
+            onChange={(e) => setName(e.currentTarget.value)}
+            placeholder="Enter a name..."
+          />
+          <button type="button" onClick={() => greet()}>
+            Greet
+          </button>
+        </div>
+      </div>
+      <p>{greetMsg}</p>
+    </div>
+  );
 }
 
 export default App;
