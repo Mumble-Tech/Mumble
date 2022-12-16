@@ -5,6 +5,7 @@ import './containers.scss';
 export interface ContainerProps {
   children: React.ReactNode;
   imageSrc?: string;
+  iconSrc?: any;
   userName?: string;
 }
 
