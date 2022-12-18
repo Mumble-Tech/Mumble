@@ -21,7 +21,10 @@ export const HomePage = () => {
         </Header>
         {/* ContainerList */}
         <ul>
-          <IconContainer iconSrc={<AiFillHome />}></ IconContainer>
+          <IconContainer iconSrc={
+            <AiFillHome className='shadow-lg mr-8' fill='#4BD8C7' />
+          }>
+          </ IconContainer>
         </ul>
       </SideNavContainer>
       <p>Test</p>
